@@ -108,13 +108,5 @@ class NameViewController: UIViewController{
         //4. 경고창 보이기
         present(idAlertMessage,animated: true,completion: nil)
     }
-    
-    
-    
-    
-    
-    
+
 }
-
-
-

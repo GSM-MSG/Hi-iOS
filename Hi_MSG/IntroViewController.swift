@@ -13,6 +13,11 @@ import Then
 
 class IntroViewController: UIViewController{
     
+    let logoImageView = UIImageView().then{
+        $0.image = UIImage(named: "HI LOGO2")
+        $0.clipsToBounds = true
+    }
+    
     let welcomeImageView = UIImageView().then{
         $0.image = UIImage(named: "Welcome_Image")
         $0.clipsToBounds = true // 잘리는거
@@ -29,25 +34,48 @@ class IntroViewController: UIViewController{
         $0.font = UIFont(name: "Pretendard-Bold", size: 20)
     }
     let loginButton = UIButton().then{
-        $0.setTitle("로그인하기", for: .normal) // 버튼 안에 들어갈 글자
+        
+        $0.setTitle("로그인하기", for: .normal)
+        $0.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 20)
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal) //버튼 안에 들어갈 글자 색깔
         $0.backgroundColor =  UIColor(rgb: 0xFFC033)
         $0.layer.cornerRadius = 15 // 버튼 곡률 크기
         $0.addTarget(self, action: #selector(aftercomplete), for: .touchUpInside)
     }
+    let signupButton = UIButton().then{
+        $0.setTitle("회원가입하기", for: .normal) // 버튼 안에 들어갈 글자
+        $0.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 20)
+        $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal) //버튼 안에 들어갈 글자 색깔
+        $0.backgroundColor =  UIColor(rgb: 0xFFC033)
+        $0.layer.cornerRadius = 15 // 버튼 곡률 크기
+        $0.addTarget(self, action: #selector(aftercomplete), for: .touchUpInside)
+        
+    }
+    
+    
     
     override func viewDidLoad(){
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        view.addSubViews(welcomeImageView,welcomeUILablel,introUILablel,loginButton)
+        view.addSubViews(logoImageView,welcomeImageView,welcomeUILablel,introUILablel,loginButton,signupButton)
         
+        logoImageView.snp.makeConstraints{
+            $0.centerX.equalTo(view)
+            $0.top.equalTo(view.snp.top).offset(52)
+            $0.height.equalTo(32)
+            $0.width.equalTo(133)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().inset(222)
+            
+        }
         
         
         welcomeImageView.snp.makeConstraints {
             $0.centerX.equalTo(view)
-            $0.top.equalTo(view.snp.top).offset(41)
-            $0.height.equalTo(360)
+            $0.top.equalTo(view.snp.top).offset(88)
+            $0.bottom.equalTo(view.snp.bottom).inset(390)
+            
             
         }
         welcomeUILablel.snp.makeConstraints{
@@ -67,6 +95,12 @@ class IntroViewController: UIViewController{
             $0.height.equalTo(50)
         }
         
+        signupButton.snp.makeConstraints{
+            $0.centerX.equalTo(view)
+            $0.top.equalTo(loginButton.snp.bottom).offset(40)
+            $0.leading.trailing.equalToSuperview().inset(67)
+            $0.height.equalTo(50)
+        }
         
         
     }
