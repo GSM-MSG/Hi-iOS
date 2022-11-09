@@ -106,9 +106,16 @@ class IntroViewController: UIViewController{
     }
     
     @objc func aftercomplete(_ sender: UIButton){
-        let vc = NameViewController()
+        let vc = FirstSignup()
         navigationController?.pushViewController(vc, animated: true)
     }
     
 }
+extension UIView {
+    func addSubViews(_ items: UIView...) {
+        items.forEach { self.addSubview($0) }
+        
+    }
+}
+
 

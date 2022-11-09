@@ -172,8 +172,3 @@ class SignupViewController: UIViewController {
     
 }
 
-extension UIView {
-    func addSubViews(_ items: UIView...) {
-        items.forEach { self.addSubview($0) }
-    }
-}

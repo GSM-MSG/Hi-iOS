@@ -22,7 +22,7 @@
 		785D364F291944A2002FDA0D /* PwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D364E291944A2002FDA0D /* PwViewController.swift */; };
 		785D3651291944AA002FDA0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D3650291944AA002FDA0D /* SceneDelegate.swift */; };
 		785D3657291945A2002FDA0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D3656291945A2002FDA0D /* LaunchScreen.storyboard */; };
-		785D3659291945CD002FDA0D /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D3658291945CD002FDA0D /* NameViewController.swift */; };
+		785D3659291945CD002FDA0D /* FirstSignup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D3658291945CD002FDA0D /* FirstSignup.swift */; };
 		785D366429194717002FDA0D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 785D366329194717002FDA0D /* SnapKit */; };
 		785D366729194724002FDA0D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 785D366629194724002FDA0D /* Then */; };
 		785D366B291949F6002FDA0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785D3652291944B4002FDA0D /* Assets.xcassets */; };
@@ -45,7 +45,7 @@
 		785D3650291944AA002FDA0D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		785D3652291944B4002FDA0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		785D3656291945A2002FDA0D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		785D3658291945CD002FDA0D /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		785D3658291945CD002FDA0D /* FirstSignup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstSignup.swift; sourceTree = "<group>"; };
 		785D36692919490A002FDA0D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		788CB93428FD45C6004C27C8 /* Hi_MSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hi_MSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -66,7 +66,7 @@
 		785D366C29194A36002FDA0D /* signupView */ = {
 			isa = PBXGroup;
 			children = (
-				785D3658291945CD002FDA0D /* NameViewController.swift */,
+				785D3658291945CD002FDA0D /* FirstSignup.swift */,
 			);
 			path = signupView;
 			sourceTree = "<group>";
@@ -122,12 +122,12 @@
 		788CB93628FD45C6004C27C8 /* Hi_MSG */ = {
 			isa = PBXGroup;
 			children = (
-				785D366C29194A36002FDA0D /* signupView */,
 				785D36692919490A002FDA0D /* Info.plist */,
 				785D3656291945A2002FDA0D /* LaunchScreen.storyboard */,
 				785D3652291944B4002FDA0D /* Assets.xcassets */,
 				785D3650291944AA002FDA0D /* SceneDelegate.swift */,
 				785D364C2919449B002FDA0D /* IntroViewController.swift */,
+				785D366C29194A36002FDA0D /* signupView */,
 				785D364E291944A2002FDA0D /* PwViewController.swift */,
 				785D364A29194493002FDA0D /* AppDelegate.swift */,
 				78CEAE0029140A010012E4B8 /* Extensions */,
@@ -244,7 +244,7 @@
 				785D364B29194493002FDA0D /* AppDelegate.swift in Sources */,
 				785D363729194472002FDA0D /* UIColor+Hex.swift in Sources */,
 				785D364F291944A2002FDA0D /* PwViewController.swift in Sources */,
-				785D3659291945CD002FDA0D /* NameViewController.swift in Sources */,
+				785D3659291945CD002FDA0D /* FirstSignup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
