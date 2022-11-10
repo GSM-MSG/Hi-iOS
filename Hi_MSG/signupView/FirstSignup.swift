@@ -43,9 +43,7 @@ class FirstSignup: UIViewController {
     let nextStepButton = UIButton().then{
         $0.backgroundColor = UIColor(rgb: 0x999999)
         $0.setTitle("다음 단계로 가볼까요?", for: .normal)
-        
-        
-        
+        $0.titleLabel?.font = UIFont(name: "Pretendard-Semibold", size: 24)
     }
     
     override func viewDidLoad() {
@@ -83,7 +81,7 @@ class FirstSignup: UIViewController {
         }
         underLineView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(20)
-            $0.top.equalTo(nameTextField.snp.bottom).offset(3)
+            $0.top.equalTo(nameTextField.snp.bottom).offset(12)
             $0.height.equalTo(2)
         }
         nextStepButton.snp.makeConstraints{
