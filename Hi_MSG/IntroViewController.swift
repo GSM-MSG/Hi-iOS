@@ -106,7 +106,7 @@ class IntroViewController: UIViewController{
     }
     
     @objc func aftercomplete(_ sender: UIButton){
-        let vc = FirstSignup()
+        let vc = FirstSignupVC()
         navigationController?.pushViewController(vc, animated: true)
     }
     
