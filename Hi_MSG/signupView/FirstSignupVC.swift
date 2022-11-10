@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class FirstSignup: UIViewController {
+class FirstSignupVC: UIViewController {
     
     let firstUILabel = UILabel().then{
         $0.text = "처음이신가요?"
