@@ -48,7 +48,7 @@ class FirstSignupVC: UIViewController {
     
     override func viewDidLoad() {
         
-        view.addSubViews(firstUILabel, welcomeUILabel, nameUILabel, nameTextField, underLineView, nextStepButton)
+        view.addSubviews(firstUILabel, welcomeUILabel, nameUILabel, nameTextField, underLineView, nextStepButton)
         
         view.backgroundColor = .white
         
