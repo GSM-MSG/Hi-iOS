@@ -40,7 +40,6 @@ class IntroViewController: UIViewController{
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal) //버튼 안에 들어갈 글자 색깔
         $0.backgroundColor =  UIColor(rgb: 0xFFC033)
         $0.layer.cornerRadius = 15 // 버튼 곡률 크기
-        $0.addTarget(self, action: #selector(aftercomplete), for: .touchUpInside)
     }
     let signupButton = UIButton().then{
         $0.setTitle("회원가입하기", for: .normal) // 버튼 안에 들어갈 글자
@@ -52,10 +51,14 @@ class IntroViewController: UIViewController{
         
     }
     
-    
+    let backBarButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: nil)
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        
+        self.navigationItem.backBarButtonItem = backBarButtonItem
+        backBarButtonItem.tintColor = UIColor(rgb: 0xFFD068)
+        
         view.backgroundColor = .white
         
         view.addSubViews(logoImageView,welcomeImageView,welcomeUILablel,introUILablel,loginButton,signupButton)
@@ -106,11 +109,12 @@ class IntroViewController: UIViewController{
     }
     
     @objc func aftercomplete(_ sender: UIButton){
-        let vc = FirstSignupVC()
+        let vc = SignUpViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     
 }
+
 extension UIView {
     func addSubViews(_ items: UIView...) {
         items.forEach { self.addSubview($0) }

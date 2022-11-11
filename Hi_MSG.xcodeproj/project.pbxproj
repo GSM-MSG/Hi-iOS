@@ -19,13 +19,15 @@
 		785D364929194487002FDA0D /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 785D364029194487002FDA0D /* Pretendard-Light.otf */; };
 		785D364B29194493002FDA0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D364A29194493002FDA0D /* AppDelegate.swift */; };
 		785D364D2919449B002FDA0D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D364C2919449B002FDA0D /* IntroViewController.swift */; };
-		785D364F291944A2002FDA0D /* PwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D364E291944A2002FDA0D /* PwViewController.swift */; };
 		785D3651291944AA002FDA0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D3650291944AA002FDA0D /* SceneDelegate.swift */; };
 		785D3657291945A2002FDA0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D3656291945A2002FDA0D /* LaunchScreen.storyboard */; };
-		785D3659291945CD002FDA0D /* FirstSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D3658291945CD002FDA0D /* FirstSignupVC.swift */; };
 		785D366429194717002FDA0D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 785D366329194717002FDA0D /* SnapKit */; };
-		785D366729194724002FDA0D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 785D366629194724002FDA0D /* Then */; };
 		785D366B291949F6002FDA0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785D3652291944B4002FDA0D /* Assets.xcassets */; };
+		B817A784291D0CEF00B1A020 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B817A783291D0CEF00B1A020 /* Then */; };
+		B817A793291D0FD200B1A020 /* UIView+addSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817A792291D0FD200B1A020 /* UIView+addSubViews.swift */; };
+		B817A795291D13D000B1A020 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817A794291D13D000B1A020 /* SignUpViewController.swift */; };
+		B817A797291D397400B1A020 /* SecondSUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817A796291D397400B1A020 /* SecondSUViewController.swift */; };
+		B817A799291E1EC200B1A020 /* ThirdSUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817A798291E1EC200B1A020 /* ThirdSUViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,13 +43,15 @@
 		785D364029194487002FDA0D /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		785D364A29194493002FDA0D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		785D364C2919449B002FDA0D /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		785D364E291944A2002FDA0D /* PwViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PwViewController.swift; sourceTree = "<group>"; };
 		785D3650291944AA002FDA0D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		785D3652291944B4002FDA0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		785D3656291945A2002FDA0D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		785D3658291945CD002FDA0D /* FirstSignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstSignupVC.swift; sourceTree = "<group>"; };
 		785D36692919490A002FDA0D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		788CB93428FD45C6004C27C8 /* Hi_MSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hi_MSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B817A792291D0FD200B1A020 /* UIView+addSubViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+addSubViews.swift"; sourceTree = "<group>"; };
+		B817A794291D13D000B1A020 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B817A796291D397400B1A020 /* SecondSUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSUViewController.swift; sourceTree = "<group>"; };
+		B817A798291E1EC200B1A020 /* ThirdSUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSUViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				785D366429194717002FDA0D /* SnapKit in Frameworks */,
-				785D366729194724002FDA0D /* Then in Frameworks */,
+				B817A784291D0CEF00B1A020 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +70,9 @@
 		785D366C29194A36002FDA0D /* signupView */ = {
 			isa = PBXGroup;
 			children = (
-				785D3658291945CD002FDA0D /* FirstSignupVC.swift */,
+				B817A794291D13D000B1A020 /* SignUpViewController.swift */,
+				B817A796291D397400B1A020 /* SecondSUViewController.swift */,
+				B817A798291E1EC200B1A020 /* ThirdSUViewController.swift */,
 			);
 			path = signupView;
 			sourceTree = "<group>";
@@ -128,7 +134,6 @@
 				785D3650291944AA002FDA0D /* SceneDelegate.swift */,
 				785D364C2919449B002FDA0D /* IntroViewController.swift */,
 				785D366C29194A36002FDA0D /* signupView */,
-				785D364E291944A2002FDA0D /* PwViewController.swift */,
 				785D364A29194493002FDA0D /* AppDelegate.swift */,
 				78CEAE0029140A010012E4B8 /* Extensions */,
 				7880D712291400AB0016B268 /* Resources */,
@@ -139,6 +144,7 @@
 		78CEAE0029140A010012E4B8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B817A78F291D0FB500B1A020 /* UIView */,
 				78CEAE0129140A060012E4B8 /* UIColor */,
 			);
 			path = Extensions;
@@ -150,6 +156,14 @@
 				785D363629194472002FDA0D /* UIColor+Hex.swift */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		B817A78F291D0FB500B1A020 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				B817A792291D0FD200B1A020 /* UIView+addSubViews.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +184,7 @@
 			name = Hi_MSG;
 			packageProductDependencies = (
 				785D366329194717002FDA0D /* SnapKit */,
-				785D366629194724002FDA0D /* Then */,
+				B817A783291D0CEF00B1A020 /* Then */,
 			);
 			productName = Hi_MSG;
 			productReference = 788CB93428FD45C6004C27C8 /* Hi_MSG.app */;
@@ -202,7 +216,7 @@
 			mainGroup = 788CB92B28FD45C6004C27C8;
 			packageReferences = (
 				785D366229194717002FDA0D /* XCRemoteSwiftPackageReference "SnapKit" */,
-				785D366529194724002FDA0D /* XCRemoteSwiftPackageReference "Then" */,
+				B817A782291D0CEF00B1A020 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 788CB93528FD45C6004C27C8 /* Products */;
 			projectDirPath = "";
@@ -239,12 +253,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B817A799291E1EC200B1A020 /* ThirdSUViewController.swift in Sources */,
+				B817A795291D13D000B1A020 /* SignUpViewController.swift in Sources */,
 				785D3651291944AA002FDA0D /* SceneDelegate.swift in Sources */,
 				785D364D2919449B002FDA0D /* IntroViewController.swift in Sources */,
+				B817A793291D0FD200B1A020 /* UIView+addSubViews.swift in Sources */,
 				785D364B29194493002FDA0D /* AppDelegate.swift in Sources */,
+				B817A797291D397400B1A020 /* SecondSUViewController.swift in Sources */,
 				785D363729194472002FDA0D /* UIColor+Hex.swift in Sources */,
-				785D364F291944A2002FDA0D /* PwViewController.swift in Sources */,
-				785D3659291945CD002FDA0D /* FirstSignupVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,12 +471,12 @@
 				kind = branch;
 			};
 		};
-		785D366529194724002FDA0D /* XCRemoteSwiftPackageReference "Then" */ = {
+		B817A782291D0CEF00B1A020 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -471,9 +487,9 @@
 			package = 785D366229194717002FDA0D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		785D366629194724002FDA0D /* Then */ = {
+		B817A783291D0CEF00B1A020 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 785D366529194724002FDA0D /* XCRemoteSwiftPackageReference "Then" */;
+			package = B817A782291D0CEF00B1A020 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
