@@ -15,7 +15,7 @@ class SecondSUViewController: UIViewController {
     var tFCheck: Bool = false // textField Check
     var cnBCheck: Bool = false // cnButton Check
     
-    let studentNameTextField = UITextField().then{
+    let emailTextField = UITextField().then{
         $0.borderStyle = .none
         $0.placeholder = "이메일을 입력해주세요"
         $0.textColor = UIColor(rgb: 0x000000)
@@ -68,7 +68,7 @@ class SecondSUViewController: UIViewController {
     
     func defaultSetting() {
         view.backgroundColor = .white
-        view.addSubviews(welcomeUILabel, subWelcomeUILabel, nameExplainUILabel, studentNameTextField, nextStepUIButton, underLineView, cnUIButton)
+        view.addSubviews(welcomeUILabel, subWelcomeUILabel, nameExplainUILabel, emailTextField, nextStepUIButton, underLineView, cnUIButton)
         autolayoutSetting()
     }
     
@@ -85,7 +85,7 @@ class SecondSUViewController: UIViewController {
             make.top.equalTo(self.subWelcomeUILabel.snp.bottom).offset(123)
             make.leading.equalTo(self.view).offset(20)
         }
-        self.studentNameTextField.snp.makeConstraints{ (make) in
+        self.emailTextField.snp.makeConstraints{ (make) in
             make.top.equalTo(self.nameExplainUILabel.snp.bottom).offset(12)
             make.leading.equalTo(self.view).offset(24)
             make.trailing.equalTo(self.view).inset(24)
@@ -96,14 +96,14 @@ class SecondSUViewController: UIViewController {
             make.height.equalTo(80)
         }
         self.underLineView.snp.makeConstraints{ (make) in
-            make.top.equalTo(studentNameTextField.snp.bottom).offset(12)
+            make.top.equalTo(emailTextField.snp.bottom).offset(12)
             make.leading.equalTo(self.view).offset(20)
             make.trailing.equalTo(self.view).inset(20)
             make.height.equalTo(2)
         }
         self.cnUIButton.snp.makeConstraints{ (make) in
-            make.top.equalTo(self.studentNameTextField.snp.top)
-            make.bottom.equalTo(self.studentNameTextField.snp.bottom)
+            make.top.equalTo(self.emailTextField.snp.top)
+            make.bottom.equalTo(self.emailTextField.snp.bottom)
             make.trailing.equalTo(self.view.snp.trailing).inset(28)
         }
     }
@@ -121,7 +121,7 @@ class SecondSUViewController: UIViewController {
     
     func emailCirtification() {
         
-        var id = studentNameTextField.text ?? "" //optional을 위해 string 뒤에 ?를 붙여준다.
+        var id = emailTextField.text ?? "" //optional을 위해 string 뒤에 ?를 붙여준다.
         
         if id.count == 16{
             let firstIdIndex = id.index(id.startIndex, offsetBy: 6) // 왜 offsetBy 6 에서 16까지 인가요?
@@ -129,6 +129,7 @@ class SecondSUViewController: UIViewController {
             let mail = id[firstIdIndex..<lastIdIndex]
             if mail == "@gsm.hs.kr"{
                 cnBCheck = true
+                print("cnBCheck is true")
             }
             else {
                 cnBCheck = false
