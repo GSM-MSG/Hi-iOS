@@ -39,7 +39,7 @@ class NameViewController: UIViewController{
         view.backgroundColor = .white
         
         
-        view.addSubViews(studentNameTextField, idTextField, authCodeTextField, idCompleteButton)
+        view.addSubviews(studentNameTextField, idTextField, authCodeTextField, idCompleteButton)
         
         
         studentNameTextField.snp.makeConstraints{

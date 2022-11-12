@@ -19,7 +19,7 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        view.addSubViews(logoImageView, idTextField, psTextField, psCorrectTextField, completeButton)
+        view.addSubviews(logoImageView, idTextField, psTextField, psCorrectTextField, completeButton)
         
         logoImageView.image = UIImage(named: "HI_LOGO")
         logoImageView.layer.cornerRadius = 50 //사진 겉에 둥글게
@@ -41,7 +41,7 @@ class SignupViewController: UIViewController {
         completeButton.setTitleColor(.white, for: .normal) //버튼 안에 들어갈 글자 색깔
         completeButton.backgroundColor = .systemYellow // 버튼 색깔
         completeButton.layer.cornerRadius = 13 // 버튼 곡률 크기
-        completeButton.addTarget(self, action: #selector(gotoLogin), for: .touchUpInside)
+//        completeButton.addTarget(self, action: #selector(gotoLogin), for: .touchUpInside)
         
         
         logoImageView.snp.makeConstraints {
