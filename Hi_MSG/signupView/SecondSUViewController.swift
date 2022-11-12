@@ -122,9 +122,10 @@ class SecondSUViewController: UIViewController {
     func emailCirtification() {
         
         var id = studentNameTextField.text ?? "" //optional을 위해 string 뒤에 ?를 붙여준다.
+        
         if id.count == 16{
-            var firstIdIndex = id.index(id.startIndex, offsetBy: 6)
-            var lastIdIndex = id.index(id.startIndex, offsetBy: 16)
+            let firstIdIndex = id.index(id.startIndex, offsetBy: 6) // 왜 offsetBy 6 에서 16까지 인가요?
+            let lastIdIndex = id.index(id.startIndex, offsetBy: 16)
             let mail = id[firstIdIndex..<lastIdIndex]
             if mail == "@gsm.hs.kr"{
                 cnBCheck = true
