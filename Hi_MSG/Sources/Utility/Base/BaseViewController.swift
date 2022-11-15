@@ -4,9 +4,11 @@ class BaseViewController: UIViewController {
     // MARK: - Properties
     let bounds = UIScreen().bounds
     
+
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupBackgroundIfNotSet()
         setup()
         addView()
