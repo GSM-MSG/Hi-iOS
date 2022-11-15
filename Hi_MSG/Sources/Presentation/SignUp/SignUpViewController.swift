@@ -68,36 +68,30 @@ class SignUpViewController: BaseViewController {
             make.top.equalTo(self.view).offset(87)
             make.leading.equalTo(self.view).offset(16)
         }
-        
         self.subWelcomeLabel.snp.makeConstraints{ (make) in
             make.top.equalTo(self.welcomeLabel.snp.bottom)
             make.leading.equalTo(self.welcomeLabel.snp.leading).inset(1)
         }
-        
         self.nameExplainLabel.snp.makeConstraints{ (make) in
             make.top.equalTo(self.subWelcomeLabel.snp.bottom).offset(123)
             make.leading.equalTo(self.view).offset(20)
         }
-        
         self.studentNameTextField.snp.makeConstraints{ (make) in
             make.top.equalTo(self.nameExplainLabel.snp.bottom).offset(12)
             make.leading.equalTo(self.view).offset(24)
             make.trailing.equalTo(self.view).inset(24)
         }
-        
         self.nextStepButton.snp.makeConstraints{ (make) in
             make.bottom.equalToSuperview()
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(80)
         }
-        
         self.underLineView.snp.makeConstraints{ (make) in
             make.top.equalTo(studentNameTextField.snp.bottom).offset(12)
             make.leading.equalTo(self.view).offset(20)
             make.trailing.equalTo(self.view).inset(20)
             make.height.equalTo(2)
         }
-        
     }
 
     @objc func aftercomplete(_ sender: UIButton){

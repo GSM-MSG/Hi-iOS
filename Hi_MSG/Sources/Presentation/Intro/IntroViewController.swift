@@ -12,7 +12,7 @@ final class IntroViewController: BaseViewController{
         $0.image = UIImage(named: "HI LOGO2")
         $0.clipsToBounds = true
     }
-    
+
     private let welcomeImageView = UIImageView().then{
         $0.image = UIImage(named: "Welcome_Image")
         $0.clipsToBounds = true // 잘리는거
@@ -71,35 +71,29 @@ final class IntroViewController: BaseViewController{
             $0.width.equalTo(133)
             $0.leading.equalToSuperview().offset(20)
         }
-        
         welcomeImageView.snp.makeConstraints {
             $0.top.equalTo(view.snp.top).offset(88)
             $0.bottom.equalTo(view.snp.bottom).inset(390)
             $0.leading.trailing.equalToSuperview()
         }
-        
         welcomeUILablel.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.top.equalTo(welcomeImageView.snp.bottom).offset(5)
         }
-        
         introUILablel.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.top.equalTo(welcomeUILablel.snp.bottom).offset(4)
         }
-        
         loginButton.snp.makeConstraints{
             $0.top.equalTo(introUILablel.snp.bottom).offset(56)
             $0.leading.trailing.equalToSuperview().inset(67)
             $0.height.equalTo(50)
         }
-        
         signupButton.snp.makeConstraints{
             $0.top.equalTo(loginButton.snp.bottom).offset(40)
             $0.leading.trailing.equalToSuperview().inset(67)
             $0.height.equalTo(50)
         }
-        
     }
     // MARK: - Bind
     override func bind() {
