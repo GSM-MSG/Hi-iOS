@@ -103,7 +103,7 @@ final class IntroViewController: BaseViewController{
         }
         
         signupButton.addTarget(for: .touchUpInside) { _ in
-            let vc = SignUpViewController()
+            let vc = FirstSUViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

@@ -26,7 +26,7 @@
 		B89966E92922870A000CCD11 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B89966E82922870A000CCD11 /* Then */; };
 		B89966EC29228A1D000CCD11 /* SecondSUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966EB29228A1D000CCD11 /* SecondSUViewController.swift */; };
 		B89966EE29228A26000CCD11 /* ThirdSUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966ED29228A26000CCD11 /* ThirdSUViewController.swift */; };
-		B89966F029228B01000CCD11 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966EF29228B01000CCD11 /* SignUpViewController.swift */; };
+		B89966F029228B01000CCD11 /* FirstSUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966EF29228B01000CCD11 /* FirstSUViewController.swift */; };
 		EE384999291DD3BE0020B231 /* ImageSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE384998291DD3BE0020B231 /* ImageSystem.swift */; };
 		EE38499B291DD3CD0020B231 /* FontSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE38499A291DD3CD0020B231 /* FontSystem.swift */; };
 		EE38499D291DD3D20020B231 /* ColorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE38499C291DD3D20020B231 /* ColorSystem.swift */; };
@@ -58,7 +58,7 @@
 		788CB93428FD45C6004C27C8 /* Hi_MSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hi_MSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89966EB29228A1D000CCD11 /* SecondSUViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondSUViewController.swift; sourceTree = "<group>"; };
 		B89966ED29228A26000CCD11 /* ThirdSUViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdSUViewController.swift; sourceTree = "<group>"; };
-		B89966EF29228B01000CCD11 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B89966EF29228B01000CCD11 /* FirstSUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSUViewController.swift; sourceTree = "<group>"; };
 		EE384998291DD3BE0020B231 /* ImageSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSystem.swift; sourceTree = "<group>"; };
 		EE38499A291DD3CD0020B231 /* FontSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSystem.swift; sourceTree = "<group>"; };
 		EE38499C291DD3D20020B231 /* ColorSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSystem.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		785D366C29194A36002FDA0D /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				B89966EF29228B01000CCD11 /* SignUpViewController.swift */,
+				B89966EF29228B01000CCD11 /* FirstSUViewController.swift */,
 				B89966EB29228A1D000CCD11 /* SecondSUViewController.swift */,
 				B89966ED29228A26000CCD11 /* ThirdSUViewController.swift */,
 			);
@@ -403,7 +403,7 @@
 				EE38499B291DD3CD0020B231 /* FontSystem.swift in Sources */,
 				B89966EC29228A1D000CCD11 /* SecondSUViewController.swift in Sources */,
 				785D364B29194493002FDA0D /* AppDelegate.swift in Sources */,
-				B89966F029228B01000CCD11 /* SignUpViewController.swift in Sources */,
+				B89966F029228B01000CCD11 /* FirstSUViewController.swift in Sources */,
 				785D363729194472002FDA0D /* UIColor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

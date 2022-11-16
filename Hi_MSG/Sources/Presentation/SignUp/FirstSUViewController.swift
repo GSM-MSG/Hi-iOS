@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class SignUpViewController: BaseViewController {
+class FirstSUViewController: BaseViewController {
 
     var nextStep: Bool = false
    
