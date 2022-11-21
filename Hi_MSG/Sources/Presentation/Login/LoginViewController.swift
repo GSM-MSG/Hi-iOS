@@ -22,13 +22,14 @@ class LoginViewController: BaseViewController{
     
     let idExplainUILabel = UILabel().then {
         $0.text = "이메일을 알려주세요!"
-        $0.font = UIFont(name: "Pretendard-SemiBold", size: 12)
+        $0.font = UIFont(name: "Pretendard-Medium", size: 12)
         $0.textColor = UIColor(rgb: 0x4D4D4D)
     }
     
     let idTextField = UITextField().then{
         $0.borderStyle = .none
         $0.placeholder = "아이디를 입력해주세요"
+        $0.font = UIFont(name: "Pretendard-Regular", size: 17)
         $0.textColor = UIColor(rgb: 0x000000)
     }
     
@@ -38,11 +39,28 @@ class LoginViewController: BaseViewController{
         $0.textColor = UIColor(rgb: 0x4D4D4D)
     }
     
+    let idUnderLineView = UIView().then {
+        $0.backgroundColor = .init(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1))
+    }
+    
     let pwTextField = UITextField().then{
         $0.borderStyle = .none
         $0.placeholder = "비밀번호를 입력해주세요"
+        $0.font = UIFont(name: "Pretendard-Regular", size: 17)
         $0.textColor = UIColor(rgb: 0x000000)
         $0.addTarget(self, action: #selector(buttonColorChange), for: .editingChanged)
+    }
+    
+    let signupUIButton = UIButton().then {
+        $0.setTitle("회원가입", for: .normal)
+        $0.setTitleColor(UIColor(rgb: 0x999999), for: .normal)
+        $0.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 16)
+    }
+    
+    let findPasswordUIButton = UIButton().then {
+        $0.setTitle("비밀번호 찾기", for: .normal)
+        $0.setTitleColor(UIColor(rgb: 0x999999), for: .normal)
+        $0.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 16)
     }
     
     let nextStepUIButton = UIButton().then {
@@ -52,24 +70,23 @@ class LoginViewController: BaseViewController{
         $0.backgroundColor = UIColor(rgb: 0x999999)
     }
     
-    let idUnderLineView = UIView().then {
+    let pwUnderLineView = UIView().then {
         $0.backgroundColor = .init(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1))
     }
     
-    let pwUnderLineView = UIView().then {
+    let betweenSignupAndPwUIButton = UIView().then {
         $0.backgroundColor = .init(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.backBarButtonItem = backBarButtonItem
         backBarButtonItem.tintColor = UIColor(rgb: 0xFFD068)
         
     }
     
     override func addView() {
-        view.addSubviews(idTextField,pwTextField,welcomeUILabel,subWelcomeUILabel,idExplainUILabel,pwExplainUILabel,nextStepUIButton,idUnderLineView,pwUnderLineView)
+        view.addSubviews(idTextField,pwTextField,welcomeUILabel,subWelcomeUILabel,idExplainUILabel,pwExplainUILabel,nextStepUIButton,idUnderLineView,pwUnderLineView,signupUIButton,findPasswordUIButton,betweenSignupAndPwUIButton)
     }
     override func setLayout() {
         self.welcomeUILabel.snp.makeConstraints{
@@ -107,6 +124,20 @@ class LoginViewController: BaseViewController{
             $0.top.equalTo(pwExplainUILabel.snp.bottom).offset(36)
             $0.leading.trailing.equalTo(self.view).offset(20)
             $0.height.equalTo(2)
+        }
+        self.findPasswordUIButton.snp.makeConstraints{
+            $0.top.equalTo(pwUnderLineView.snp.bottom).offset(24)
+            $0.leading.equalTo(self.view).inset(268)
+        }
+        self.betweenSignupAndPwUIButton.snp.makeConstraints{
+            $0.top.equalTo(pwUnderLineView.snp.bottom).offset(30)
+            $0.trailing.equalTo(findPasswordUIButton.snp.leading).offset(-12)
+            $0.height.equalTo(19)
+            $0.width.equalTo(1)
+        }
+        self.signupUIButton.snp.makeConstraints{
+            $0.top.equalTo(pwUnderLineView.snp.bottom).offset(24)
+            $0.trailing.equalTo(betweenSignupAndPwUIButton.snp.leading).offset(-12)
         }
         self.nextStepUIButton.snp.makeConstraints{
             $0.bottom.equalToSuperview()
