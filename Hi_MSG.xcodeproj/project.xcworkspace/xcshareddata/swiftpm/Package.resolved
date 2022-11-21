@@ -1,15 +1,6 @@
 {
   "pins" : [
     {
-      "identity" : "iqkeyboardmanager",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/hackiftekhar/IQKeyboardManager",
-      "state" : {
-        "branch" : "master",
-        "revision" : "7399efb730eea084571b45a1a9b36a3a3c54c44f"
-      }
-    },
-    {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SnapKit/SnapKit",

@@ -82,7 +82,7 @@ final class IntroViewController: BaseViewController{
     // MARK: - Bind
     override func bind() {
         loginButton.addTarget(for: .touchUpInside) { _ in
-            let vc = FirstSignupVC()
+            let vc = LoginViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
         signupButton.addTarget(for: .touchUpInside) { _ in
