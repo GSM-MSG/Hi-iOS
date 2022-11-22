@@ -145,6 +145,7 @@ class LoginViewController: BaseViewController{
             $0.height.equalTo(80)
         }
     }
+    
     @objc func buttonColorChange(_ sender: Any?) {
         if pwTextField.text?.count ?? 0 >= 1{
             nextStepUIButton.backgroundColor = UIColor(rgb: 0xFFC033)
@@ -152,5 +153,13 @@ class LoginViewController: BaseViewController{
         else {
             nextStepUIButton.backgroundColor = UIColor(rgb: 0x999999)
         }
+    }
+    
+    override func bind() {
+        signupUIButton.addTarget(for: .touchUpInside) { _ in
+            let vc = FirstSignupVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
 }
