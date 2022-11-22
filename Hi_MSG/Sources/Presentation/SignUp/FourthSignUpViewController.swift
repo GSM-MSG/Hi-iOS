@@ -62,7 +62,7 @@ class FourthSignUpViewController: BaseViewController {
             $0.height.equalTo(60)
         }
         self.signupSuccessImageView.snp.makeConstraints {
-            $0.bottom.equalTo(self.welcomeLabel.snp.top).inset(28)
+            $0.bottom.equalTo(self.welcomeLabel.snp.top).inset(-28)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(128)
             $0.height.equalTo(128)
