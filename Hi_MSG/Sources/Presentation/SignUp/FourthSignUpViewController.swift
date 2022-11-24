@@ -42,10 +42,16 @@ class FourthSignUpViewController: BaseViewController {
     }
     
     override func addView() {
-        view.addSubviews(welcomeLabel, subWelcomeLabel, nextStepButton, signupSuccessImageView)
+        view.addSubviews(signupSuccessImageView, welcomeLabel, subWelcomeLabel, nextStepButton)
     }
     
     override func setLayout() {
+        self.signupSuccessImageView.snp.makeConstraints {
+            $0.bottom.equalTo(self.welcomeLabel.snp.top).inset(-28)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(128)
+            $0.height.equalTo(128)
+        }
         self.welcomeLabel.snp.makeConstraints { 
             $0.top.equalTo(self.view).offset(381)
             $0.centerX.equalToSuperview()
@@ -61,12 +67,6 @@ class FourthSignUpViewController: BaseViewController {
             $0.trailing.equalTo(self.view).inset(20)
             $0.height.equalTo(60)
         }
-        self.signupSuccessImageView.snp.makeConstraints {
-            $0.bottom.equalTo(self.welcomeLabel.snp.top).inset(-28)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(128)
-            $0.height.equalTo(128)
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,5 +77,4 @@ class FourthSignUpViewController: BaseViewController {
     @objc private func aftercomplete(_ sender: UIButton) {
         navigationController?.popToRootViewController( animated: false )
     }
-    
 }
