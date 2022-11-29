@@ -25,7 +25,13 @@
 		785D3651291944AA002FDA0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D3650291944AA002FDA0D /* SceneDelegate.swift */; };
 		785D3657291945A2002FDA0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D3656291945A2002FDA0D /* LaunchScreen.storyboard */; };
 		785D3659291945CD002FDA0D /* FirstSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D3658291945CD002FDA0D /* FirstSignupVC.swift */; };
+		785D366429194717002FDA0D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 785D366329194717002FDA0D /* SnapKit */; };
 		785D366B291949F6002FDA0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785D3652291944B4002FDA0D /* Assets.xcassets */; };
+		B89966E92922870A000CCD11 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B89966E82922870A000CCD11 /* Then */; };
+		B89966EC29228A1D000CCD11 /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966EB29228A1D000CCD11 /* SecondSignUpViewController.swift */; };
+		B89966EE29228A26000CCD11 /* ThirdSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966ED29228A26000CCD11 /* ThirdSignUpViewController.swift */; };
+		B89966F029228B01000CCD11 /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966EF29228B01000CCD11 /* FirstSignUpViewController.swift */; };
+		B89966F2292BC72B000CCD11 /* FourthSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966F1292BC72B000CCD11 /* FourthSignUpViewController.swift */; };
 		EE384999291DD3BE0020B231 /* ImageSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE384998291DD3BE0020B231 /* ImageSystem.swift */; };
 		EE38499B291DD3CD0020B231 /* FontSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE38499A291DD3CD0020B231 /* FontSystem.swift */; };
 		EE38499D291DD3D20020B231 /* ColorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE38499C291DD3D20020B231 /* ColorSystem.swift */; };
@@ -33,8 +39,6 @@
 		EE3849A4291DD7560020B231 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3849A3291DD7560020B231 /* Color.xcassets */; };
 		EE3849A7291DE02C0020B231 /* UIButton+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3849A6291DE02C0020B231 /* UIButton+Action.swift */; };
 		EE45BEC3291DC42300736608 /* UIView+addSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45BEC2291DC42300736608 /* UIView+addSubViews.swift */; };
-		EE45BECB291DC54F00736608 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45BEC9291DC54F00736608 /* NameViewController.swift */; };
-		EE45BECC291DC54F00736608 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45BECA291DC54F00736608 /* SignupViewController.swift */; };
 		EE45BED0291DC5DF00736608 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45BECF291DC5DF00736608 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,9 +59,12 @@
 		785D3650291944AA002FDA0D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		785D3652291944B4002FDA0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		785D3656291945A2002FDA0D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		785D3658291945CD002FDA0D /* FirstSignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstSignupVC.swift; sourceTree = "<group>"; };
 		785D36692919490A002FDA0D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		788CB93428FD45C6004C27C8 /* Hi_MSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hi_MSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B89966EB29228A1D000CCD11 /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
+		B89966ED29228A26000CCD11 /* ThirdSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdSignUpViewController.swift; sourceTree = "<group>"; };
+		B89966EF29228B01000CCD11 /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
+		B89966F1292BC72B000CCD11 /* FourthSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthSignUpViewController.swift; sourceTree = "<group>"; };
 		EE384998291DD3BE0020B231 /* ImageSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSystem.swift; sourceTree = "<group>"; };
 		EE38499A291DD3CD0020B231 /* FontSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSystem.swift; sourceTree = "<group>"; };
 		EE38499C291DD3D20020B231 /* ColorSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSystem.swift; sourceTree = "<group>"; };
@@ -65,8 +72,6 @@
 		EE3849A3291DD7560020B231 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		EE3849A6291DE02C0020B231 /* UIButton+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Action.swift"; sourceTree = "<group>"; };
 		EE45BEC2291DC42300736608 /* UIView+addSubViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+addSubViews.swift"; sourceTree = "<group>"; };
-		EE45BEC9291DC54F00736608 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
-		EE45BECA291DC54F00736608 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		EE45BECF291DC5DF00736608 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,9 +99,10 @@
 		785D366C29194A36002FDA0D /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				785D3658291945CD002FDA0D /* FirstSignupVC.swift */,
-				EE45BEC9291DC54F00736608 /* NameViewController.swift */,
-				EE45BECA291DC54F00736608 /* SignupViewController.swift */,
+				B89966EF29228B01000CCD11 /* FirstSignUpViewController.swift */,
+				B89966EB29228A1D000CCD11 /* SecondSignUpViewController.swift */,
+				B89966ED29228A26000CCD11 /* ThirdSignUpViewController.swift */,
+				B89966F1292BC72B000CCD11 /* FourthSignUpViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -400,19 +406,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				783ED8342922826C00B18907 /* LoginViewController.swift in Sources */,
+				B89966EE29228A26000CCD11 /* ThirdSignUpViewController.swift in Sources */,
 				EE384999291DD3BE0020B231 /* ImageSystem.swift in Sources */,
+				B89966F2292BC72B000CCD11 /* FourthSignUpViewController.swift in Sources */,
 				785D3651291944AA002FDA0D /* SceneDelegate.swift in Sources */,
 				EE3849A7291DE02C0020B231 /* UIButton+Action.swift in Sources */,
 				785D364D2919449B002FDA0D /* IntroViewController.swift in Sources */,
-				EE45BECC291DC54F00736608 /* SignupViewController.swift in Sources */,
 				EE38499D291DD3D20020B231 /* ColorSystem.swift in Sources */,
-				EE45BECB291DC54F00736608 /* NameViewController.swift in Sources */,
 				EE45BEC3291DC42300736608 /* UIView+addSubViews.swift in Sources */,
 				EE45BED0291DC5DF00736608 /* BaseViewController.swift in Sources */,
 				EE38499B291DD3CD0020B231 /* FontSystem.swift in Sources */,
+				B89966EC29228A1D000CCD11 /* SecondSignUpViewController.swift in Sources */,
 				785D364B29194493002FDA0D /* AppDelegate.swift in Sources */,
+				B89966F029228B01000CCD11 /* FirstSignUpViewController.swift in Sources */,
 				785D363729194472002FDA0D /* UIColor+Hex.swift in Sources */,
-				785D3659291945CD002FDA0D /* FirstSignupVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

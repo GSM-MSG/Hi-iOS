@@ -4,6 +4,7 @@ import SnapKit
 import Then
 
 final class IntroViewController: BaseViewController{
+    // MARK: - Properties
     
     let backBarButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: nil)
     
@@ -11,7 +12,7 @@ final class IntroViewController: BaseViewController{
         $0.image = UIImage(named: "HI LOGO2")
         $0.clipsToBounds = true
     }
-    
+
     private let welcomeImageView = UIImageView().then{
         $0.image = UIImage(named: "Welcome_Image")
         $0.clipsToBounds = true // 잘리는거
@@ -44,6 +45,14 @@ final class IntroViewController: BaseViewController{
         $0.backgroundColor =  UIColor(rgb: 0xFFC033)
         $0.layer.cornerRadius = 15 // 버튼 곡률 크기
     }
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.backBarButtonItem = backBarButtonItem
+        backBarButtonItem.tintColor = UIColor(rgb: 0xFFD068)
+    }
+    
+    // MARK: - Method
     override func addView() {
         view.addSubviews(
             logoImageView,
@@ -53,12 +62,6 @@ final class IntroViewController: BaseViewController{
             loginButton,
             signupButton
         )
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.backBarButtonItem = backBarButtonItem
-        backBarButtonItem.tintColor = UIColor(rgb: 0xFFD068)
     }
     
     override func setLayout() {
@@ -97,8 +100,9 @@ final class IntroViewController: BaseViewController{
             let vc = LoginViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
+        
         signupButton.addTarget(for: .touchUpInside) { _ in
-            let vc = FirstSignupVC()
+            let vc = FirstSignUpViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
