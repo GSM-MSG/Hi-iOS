@@ -4,77 +4,77 @@ import UIKit
 import SnapKit
 import Then
 
-class LoginViewController: BaseViewController{
+final class LoginViewController: BaseViewController {
     
-    let backBarButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: nil)
+    private let backBarButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: nil)
     
-    let welcomeUILabel = UILabel().then {
+    private let welcomeUILabel = UILabel().then {
         $0.text = "돌아오셨네요!"
-        $0.font = UIFont(name: "Pretendard-ExtraBold", size: 34)
+        $0.font = .hi_MSG(size: 34, family: .extraBold)
         $0.textColor = UIColor(rgb: 0x000000)
     }
     
-    let subWelcomeUILabel = UILabel().then {
+    private let subWelcomeUILabel = UILabel().then {
         $0.text = "다시 만나서 반가워요!"
-        $0.font = UIFont(name: "Pretendard-SemiBold", size: 16)
+        $0.font = .hi_MSG(size: 16, family: .semiBold)
         $0.textColor = UIColor(rgb: 0x999999)
     }
     
-    let idExplainUILabel = UILabel().then {
+    private let idExplainUILabel = UILabel().then {
         $0.text = "이메일을 알려주세요!"
-        $0.font = UIFont(name: "Pretendard-Medium", size: 12)
+        $0.font = .hi_MSG(size: 12, family: .medium)
         $0.textColor = UIColor(rgb: 0x4D4D4D)
     }
     
-    let idTextField = UITextField().then{
+    private let idTextField = UITextField().then{
         $0.borderStyle = .none
         $0.placeholder = "아이디를 입력해주세요"
-        $0.font = UIFont(name: "Pretendard-Regular", size: 17)
+        $0.font = .hi_MSG(size: 17, family: .regular)
         $0.textColor = UIColor(rgb: 0x000000)
     }
     
-    let pwExplainUILabel = UILabel().then {
+    private let pwExplainUILabel = UILabel().then {
         $0.text = "비밀번호를 써주세요!"
-        $0.font = UIFont(name: "Pretendard-Medium", size: 12)
+        $0.font = .hi_MSG(size: 12, family: .medium)
         $0.textColor = UIColor(rgb: 0x4D4D4D)
     }
     
-    let idUnderLineView = UIView().then {
+    private let idUnderLineView = UIView().then {
         $0.backgroundColor = .init(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1))
     }
     
-    let pwTextField = UITextField().then{
+    private let pwTextField = UITextField().then{
         $0.borderStyle = .none
         $0.placeholder = "비밀번호를 입력해주세요"
-        $0.font = UIFont(name: "Pretendard-Regular", size: 17)
+        $0.font = .hi_MSG(size: 17, family: .regular)
         $0.textColor = UIColor(rgb: 0x000000)
         $0.addTarget(self, action: #selector(buttonColorChange), for: .editingChanged)
     }
     
-    let signupUIButton = UIButton().then {
+    private let signupUIButton = UIButton().then {
         $0.setTitle("회원가입", for: .normal)
         $0.setTitleColor(UIColor(rgb: 0x999999), for: .normal)
-        $0.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 16)
+        $0.titleLabel?.font = .hi_MSG(size: 16, family: .medium)
     }
     
-    let findPasswordUIButton = UIButton().then {
+    private let findPasswordUIButton = UIButton().then {
         $0.setTitle("비밀번호 찾기", for: .normal)
         $0.setTitleColor(UIColor(rgb: 0x999999), for: .normal)
-        $0.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 16)
+        $0.titleLabel?.font = .hi_MSG(size: 16, family: .medium)
     }
     
-    let nextStepUIButton = UIButton().then {
+    private let nextStepUIButton = UIButton().then {
         $0.setTitle("로그인하기", for: .normal)
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
-        $0.titleLabel?.font = UIFont(name: "Pretendard-SemiBold", size: 24)
+        $0.titleLabel?.font = .hi_MSG(size: 24, family: .semiBold)
         $0.backgroundColor = UIColor(rgb: 0x999999)
     }
     
-    let pwUnderLineView = UIView().then {
+    private let pwUnderLineView = UIView().then {
         $0.backgroundColor = .init(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1))
     }
     
-    let betweenSignupAndPwUIButton = UIView().then {
+    private let betweenSignupAndPwUIButton = UIView().then {
         $0.backgroundColor = .init(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1))
     }
     
@@ -147,12 +147,8 @@ class LoginViewController: BaseViewController{
     }
     
     @objc func buttonColorChange(_ sender: Any?) {
-        if pwTextField.text?.count ?? 0 >= 1{
-            nextStepUIButton.backgroundColor = UIColor(rgb: 0xFFC033)
-        }
-        else {
-            nextStepUIButton.backgroundColor = UIColor(rgb: 0x999999)
-        }
+        
+        nextStepUIButton.backgroundColor = UIColor(rgb :pwTextField.text?.count ?? 0 >= 1 ?  0xFFC033 : 0x999999 )
     }
     
     override func bind() {
@@ -160,6 +156,5 @@ class LoginViewController: BaseViewController{
             let vc = FirstSignupVC()
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        
     }
 }
