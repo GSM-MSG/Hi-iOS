@@ -95,11 +95,10 @@ final class IntroViewController: BaseViewController{
             $0.height.equalTo(50)
         }
     }
-    // MARK: - Bind
     override func bind() {
         loginButton.addTarget(for: .touchUpInside) { _ in
-//            let vc = SignUpViewController() // 로그인 뷰 컨트롤러로 넘어 가세요~
-//            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = LoginViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
         signupButton.addTarget(for: .touchUpInside) { _ in

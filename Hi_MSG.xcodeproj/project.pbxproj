@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		783ED8342922826C00B18907 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783ED8332922826C00B18907 /* LoginViewController.swift */; };
+		783ED837292282B200B18907 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 783ED836292282B200B18907 /* SnapKit */; };
+		783ED83A292282BC00B18907 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 783ED839292282BC00B18907 /* Then */; };
 		785D363729194472002FDA0D /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D363629194472002FDA0D /* UIColor+Hex.swift */; };
 		785D364129194487002FDA0D /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 785D363829194486002FDA0D /* Pretendard-Black.otf */; };
 		785D364229194487002FDA0D /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 785D363929194486002FDA0D /* Pretendard-Regular.otf */; };
@@ -21,6 +24,7 @@
 		785D364D2919449B002FDA0D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D364C2919449B002FDA0D /* IntroViewController.swift */; };
 		785D3651291944AA002FDA0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D3650291944AA002FDA0D /* SceneDelegate.swift */; };
 		785D3657291945A2002FDA0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D3656291945A2002FDA0D /* LaunchScreen.storyboard */; };
+		785D3659291945CD002FDA0D /* FirstSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D3658291945CD002FDA0D /* FirstSignupVC.swift */; };
 		785D366429194717002FDA0D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 785D366329194717002FDA0D /* SnapKit */; };
 		785D366B291949F6002FDA0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785D3652291944B4002FDA0D /* Assets.xcassets */; };
 		B89966E92922870A000CCD11 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B89966E82922870A000CCD11 /* Then */; };
@@ -36,10 +40,10 @@
 		EE3849A7291DE02C0020B231 /* UIButton+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3849A6291DE02C0020B231 /* UIButton+Action.swift */; };
 		EE45BEC3291DC42300736608 /* UIView+addSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45BEC2291DC42300736608 /* UIView+addSubViews.swift */; };
 		EE45BED0291DC5DF00736608 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45BECF291DC5DF00736608 /* BaseViewController.swift */; };
-		EE45BED4291DCD1B00736608 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE45BED3291DCD1B00736608 /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		783ED8332922826C00B18907 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		785D363629194472002FDA0D /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		785D363829194486002FDA0D /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		785D363929194486002FDA0D /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -76,15 +80,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				785D366429194717002FDA0D /* SnapKit in Frameworks */,
-				B89966E92922870A000CCD11 /* Then in Frameworks */,
-				EE45BED4291DCD1B00736608 /* IQKeyboardManagerSwift in Frameworks */,
+				783ED837292282B200B18907 /* SnapKit in Frameworks */,
+				783ED83A292282BC00B18907 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		783ED8322922825400B18907 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				783ED8332922826C00B18907 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		785D366C29194A36002FDA0D /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +285,7 @@
 		EE45BEBE291DC39E00736608 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				783ED8322922825400B18907 /* Login */,
 				EE45BEBF291DC3BB00736608 /* Intro */,
 				785D366C29194A36002FDA0D /* SignUp */,
 			);
@@ -321,9 +333,8 @@
 			);
 			name = Hi_MSG;
 			packageProductDependencies = (
-				785D366329194717002FDA0D /* SnapKit */,
-				EE45BED3291DCD1B00736608 /* IQKeyboardManagerSwift */,
-				B89966E82922870A000CCD11 /* Then */,
+				783ED836292282B200B18907 /* SnapKit */,
+				783ED839292282BC00B18907 /* Then */,
 			);
 			productName = Hi_MSG;
 			productReference = 788CB93428FD45C6004C27C8 /* Hi_MSG.app */;
@@ -354,9 +365,8 @@
 			);
 			mainGroup = 788CB92B28FD45C6004C27C8;
 			packageReferences = (
-				785D366229194717002FDA0D /* XCRemoteSwiftPackageReference "SnapKit" */,
-				EE45BED2291DCD1B00736608 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				B89966E72922870A000CCD11 /* XCRemoteSwiftPackageReference "Then" */,
+				783ED835292282B200B18907 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				783ED838292282BC00B18907 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 788CB93528FD45C6004C27C8 /* Products */;
 			projectDirPath = "";
@@ -395,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				783ED8342922826C00B18907 /* LoginViewController.swift in Sources */,
 				B89966EE29228A26000CCD11 /* ThirdSignUpViewController.swift in Sources */,
 				EE384999291DD3BE0020B231 /* ImageSystem.swift in Sources */,
 				B89966F2292BC72B000CCD11 /* FourthSignUpViewController.swift in Sources */,
@@ -611,7 +622,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		785D366229194717002FDA0D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		783ED835292282B200B18907 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -619,17 +630,9 @@
 				kind = branch;
 			};
 		};
-		B89966E72922870A000CCD11 /* XCRemoteSwiftPackageReference "Then" */ = {
+		783ED838292282BC00B18907 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		EE45BED2291DCD1B00736608 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -638,20 +641,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		785D366329194717002FDA0D /* SnapKit */ = {
+		783ED836292282B200B18907 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 785D366229194717002FDA0D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 783ED835292282B200B18907 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		B89966E82922870A000CCD11 /* Then */ = {
+		783ED839292282BC00B18907 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B89966E72922870A000CCD11 /* XCRemoteSwiftPackageReference "Then" */;
+			package = 783ED838292282BC00B18907 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
-		};
-		EE45BED3291DCD1B00736608 /* IQKeyboardManagerSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EE45BED2291DCD1B00736608 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
