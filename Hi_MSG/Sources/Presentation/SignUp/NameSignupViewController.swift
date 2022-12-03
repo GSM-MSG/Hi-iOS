@@ -1,14 +1,9 @@
-//  ViewController.swift
-//  HB ( made by Park Gun Woo )
-//
-//  Created by GSM02 on 2022/11/09.
-//
 import Foundation
 import UIKit
 import SnapKit
 import Then
 
-class FirstSignUpViewController: BaseViewController {
+class NameSignupViewController: BaseViewController {
     
     private var nextStep: Bool = false
     
@@ -32,7 +27,7 @@ class FirstSignUpViewController: BaseViewController {
         $0.textColor = UIColor(rgb: 0x4D4D4D)
     }
     
-    private let studentNameTextField = UITextField().then{
+    private let nameTextField = UITextField().then{
         $0.borderStyle = .none
         $0.placeholder = "실명을 입력해주세요!"
         $0.font = .hi_MSG(size: 17, family: .regular)
@@ -49,17 +44,17 @@ class FirstSignUpViewController: BaseViewController {
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 22, family: .semiBold)
         $0.backgroundColor = UIColor(rgb: 0x999999)
-        $0.addTarget(self, action: #selector(afterComplete), for: .touchUpInside) 
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = backBarButtonItem
         backBarButtonItem.tintColor = UIColor(rgb: 0xFFD068)
+        
     }
     
     override func addView() {
-        view.addSubviews(welcomeLabel, subWelcomeLabel, nameExplainLabel, studentNameTextField, underLineView, nextStepButton)
+        view.addSubviews(welcomeLabel, subWelcomeLabel, nameExplainLabel, nameTextField, underLineView, nextStepButton)
     }
     
     override func setLayout() {
@@ -75,13 +70,13 @@ class FirstSignUpViewController: BaseViewController {
             $0.top.equalTo(self.subWelcomeLabel.snp.bottom).offset(123)
             $0.leading.equalTo(self.view).offset(20)
         }
-        self.studentNameTextField.snp.makeConstraints {
+        self.nameTextField.snp.makeConstraints {
             $0.top.equalTo(self.nameExplainLabel.snp.bottom).offset(12)
             $0.leading.equalTo(self.view).offset(24)
             $0.trailing.equalTo(self.view).inset(24)
         }
         self.underLineView.snp.makeConstraints {
-            $0.top.equalTo(studentNameTextField.snp.bottom).offset(12)
+            $0.top.equalTo(nameTextField.snp.bottom).offset(12)
             $0.leading.equalTo(self.view).offset(20)
             $0.trailing.equalTo(self.view).inset(20)
             $0.height.equalTo(2)
@@ -94,7 +89,7 @@ class FirstSignUpViewController: BaseViewController {
     }
     
     @objc private func textFieldDidChange(_ sender: Any?) {
-        if studentNameTextField.text?.count ?? 0 >= 1{
+        if nameTextField.text?.count ?? 0 >= 1{
             nextStepButton.backgroundColor = UIColor(rgb: 0xFFC033)
             nextStep = true
         }
@@ -104,11 +99,15 @@ class FirstSignUpViewController: BaseViewController {
         }
     }
     
-    @objc private func afterComplete(_ sender: UIButton){
-        if nextStep == true {
-            let vc = SecondSignUpViewController()
-            navigationController?.pushViewController(vc, animated: true)
+    override func bind() {
+        nextStepButton.addTarget(for: .touchUpInside) { _ in
+            if self.nextStep == true{
+                let vc = EmailSignupViewController()
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
         }
     }
 }
+
+
 

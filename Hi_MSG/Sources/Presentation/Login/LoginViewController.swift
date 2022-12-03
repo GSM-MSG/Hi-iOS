@@ -1,4 +1,3 @@
-
 import Foundation
 import UIKit
 import SnapKit
@@ -82,7 +81,6 @@ final class LoginViewController: BaseViewController {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = backBarButtonItem
         backBarButtonItem.tintColor = UIColor(rgb: 0xFFD068)
-        
     }
     
     override func addView() {
@@ -147,14 +145,13 @@ final class LoginViewController: BaseViewController {
     }
     
     @objc func buttonColorChange(_ sender: Any?) {
-        
         nextStepUIButton.backgroundColor = UIColor(rgb :pwTextField.text?.count ?? 0 >= 1 ?  0xFFC033 : 0x999999 )
     }
     
     override func bind() {
         signupUIButton.addTarget(for: .touchUpInside) { _ in
-            let vc = FirstSignupVC()
-            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = NameSignupViewController()
+            self.navigationController?.pushViewController(vc, animated: false)
         }
     }
 }

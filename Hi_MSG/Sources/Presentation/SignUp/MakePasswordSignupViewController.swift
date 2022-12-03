@@ -1,13 +1,6 @@
-//
-//  ThirdSUViewController.swift
-//  Hi_MSG
-//
-//  Created by GSM02 on 2022/11/11.
-//
-
 import UIKit
 
-class ThirdSignUpViewController: BaseViewController {
+class MakePassWordViewController: BaseViewController {
     
     private var nextStep: Bool = false
     
@@ -66,7 +59,6 @@ class ThirdSignUpViewController: BaseViewController {
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 22, family: .semiBold)
         $0.backgroundColor = UIColor(rgb: 0x999999)
-        $0.addTarget(self, action: #selector(aftercomplete), for: .touchUpInside)
     }
     
     override func addView() {
@@ -120,7 +112,7 @@ class ThirdSignUpViewController: BaseViewController {
     }
    
     @objc private func textFieldDidChange(_ sender: Any?) {
-        if passwordTextField.text == passwordCheckTextField.text && passwordTextField.text?.count ?? 0 >= 8 {
+        if passwordTextField.text == passwordCheckTextField.text && passwordTextField.text?.count ?? 0 >= 8 && passwordTextField.text?.count ?? 0 <= 16{
             let ps: String = passwordCheckTextField.text ?? ""
             
             let psCheck = "^(?=.*[!@#$%^&*()_+=-])"
@@ -136,11 +128,12 @@ class ThirdSignUpViewController: BaseViewController {
         }
     }
     
-    @objc private func aftercomplete(_ sender: UIButton){
-        if nextStep == true {
-            let vc = FourthSignUpViewController()
-            navigationController?.pushViewController(vc, animated: false)
-            //            navigationController?.popToRootViewController( animated: false )
+    override func bind() {
+        nextStepButton.addTarget(for: .touchUpInside) { _ in
+            if self.nextStep == true{
+                let vc = WelcomeSignupViewController()
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
         }
     }
 }

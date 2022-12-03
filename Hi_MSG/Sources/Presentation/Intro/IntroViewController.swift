@@ -4,7 +4,6 @@ import SnapKit
 import Then
 
 final class IntroViewController: BaseViewController{
-    // MARK: - Properties
     
     let backBarButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: nil)
     
@@ -15,7 +14,7 @@ final class IntroViewController: BaseViewController{
 
     private let welcomeImageView = UIImageView().then{
         $0.image = UIImage(named: "Welcome_Image")
-        $0.clipsToBounds = true // 잘리는거
+        $0.clipsToBounds = true
     }
     
     private let welcomeUILablel = UILabel().then{
@@ -33,17 +32,17 @@ final class IntroViewController: BaseViewController{
     private let loginButton = UIButton().then{
         $0.setTitle("로그인하기", for: .normal)
         $0.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 20)
-        $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal) //버튼 안에 들어갈 글자 색깔
+        $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.backgroundColor =  UIColor(rgb: 0xFFC033)
-        $0.layer.cornerRadius = 15 // 버튼 곡률 크기
+        $0.layer.cornerRadius = 15
     }
     
     private let signupButton = UIButton().then{
-        $0.setTitle("회원가입하기", for: .normal) // 버튼 안에 들어갈 글자
+        $0.setTitle("회원가입하기", for: .normal)
         $0.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 20)
-        $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal) //버튼 안에 들어갈 글자 색깔
+        $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.backgroundColor =  UIColor(rgb: 0xFFC033)
-        $0.layer.cornerRadius = 15 // 버튼 곡률 크기
+        $0.layer.cornerRadius = 15 
     }
    
     override func viewDidLoad() {
@@ -52,7 +51,6 @@ final class IntroViewController: BaseViewController{
         backBarButtonItem.tintColor = UIColor(rgb: 0xFFD068)
     }
     
-    // MARK: - Method
     override func addView() {
         view.addSubviews(
             logoImageView,
@@ -102,7 +100,7 @@ final class IntroViewController: BaseViewController{
         }
         
         signupButton.addTarget(for: .touchUpInside) { _ in
-            let vc = FirstSignUpViewController()
+            let vc = NameSignupViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

@@ -1,13 +1,6 @@
-//
-//  FourthSignUpViewController.swift
-//  Hi_MSG
-//
-//  Created by GSM02 on 2022/11/21.
-//
-
 import UIKit
 
-class FourthSignUpViewController: BaseViewController {
+class WelcomeSignupViewController: BaseViewController {
     
     private let signupSuccessImageView = UIImageView().then{
         $0.image = UIImage(named: "SignUp_Success_image")
@@ -33,7 +26,6 @@ class FourthSignUpViewController: BaseViewController {
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 23, family: .semiBold)
         $0.backgroundColor = UIColor(rgb: 0xFFC033)
-        $0.addTarget(self, action: #selector(aftercomplete), for: .touchUpInside) 
     }
     
     override func viewDidLoad() {
@@ -74,7 +66,10 @@ class FourthSignUpViewController: BaseViewController {
           self.navigationItem.hidesBackButton = true
      }
     
-    @objc private func aftercomplete(_ sender: UIButton) {
-        navigationController?.popToRootViewController( animated: false )
+    override func bind() {
+        nextStepButton.addTarget(for: .touchUpInside) { _ in
+            let vc = LoginViewController()
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
     }
 }
