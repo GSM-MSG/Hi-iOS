@@ -3,7 +3,7 @@ import UIKit
 import SnapKit
 import Then
 
-class NameSignupViewController: BaseViewController {
+final class NameSignupViewController: BaseViewController {
     
     private var nextStep: Bool = false
     

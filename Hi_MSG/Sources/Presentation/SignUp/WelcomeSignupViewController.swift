@@ -1,6 +1,6 @@
 import UIKit
 
-class WelcomeSignupViewController: BaseViewController {
+final class WelcomeSignupViewController: BaseViewController {
     
     private let signupSuccessImageView = UIImageView().then{
         $0.image = UIImage(named: "SignUp_Success_image")
