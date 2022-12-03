@@ -69,7 +69,7 @@ class WelcomeSignupViewController: BaseViewController {
     override func bind() {
         nextStepButton.addTarget(for: .touchUpInside) { _ in
             let vc = LoginViewController()
-            self.navigationController?.pushViewController(vc, animated: false)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

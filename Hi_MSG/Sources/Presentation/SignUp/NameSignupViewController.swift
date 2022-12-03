@@ -103,7 +103,7 @@ class NameSignupViewController: BaseViewController {
         nextStepButton.addTarget(for: .touchUpInside) { _ in
             if self.nextStep == true{
                 let vc = EmailSignupViewController()
-                self.navigationController?.pushViewController(vc, animated: false)
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }

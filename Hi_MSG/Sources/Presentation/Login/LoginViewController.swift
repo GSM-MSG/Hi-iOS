@@ -151,7 +151,7 @@ final class LoginViewController: BaseViewController {
     override func bind() {
         signupUIButton.addTarget(for: .touchUpInside) { _ in
             let vc = NameSignupViewController()
-            self.navigationController?.pushViewController(vc, animated: false)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

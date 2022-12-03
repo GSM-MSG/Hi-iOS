@@ -132,7 +132,7 @@ class MakePassWordViewController: BaseViewController {
         nextStepButton.addTarget(for: .touchUpInside) { _ in
             if self.nextStep == true{
                 let vc = WelcomeSignupViewController()
-                self.navigationController?.pushViewController(vc, animated: false)
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }

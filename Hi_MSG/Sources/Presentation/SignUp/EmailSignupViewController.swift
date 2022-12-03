@@ -158,7 +158,7 @@ class EmailSignupViewController: BaseViewController {
         nextStepButton.addTarget(for: .touchUpInside) { _ in
             if self.nextStep == true{
                 let vc = MakePassWordViewController()
-                self.navigationController?.pushViewController(vc, animated: false)
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
