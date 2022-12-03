@@ -54,6 +54,7 @@ final class LoginViewController: BaseViewController {
         $0.setTitle("회원가입", for: .normal)
         $0.setTitleColor(UIColor(rgb: 0x999999), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 16, family: .medium)
+        $0.addTarget(self, action: #selector(goToSignup), for: .touchUpInside)
     }
     
     private let findPasswordUIButton = UIButton().then {
@@ -148,10 +149,12 @@ final class LoginViewController: BaseViewController {
         nextStepUIButton.backgroundColor = UIColor(rgb :pwTextField.text?.count ?? 0 >= 1 ?  0xFFC033 : 0x999999 )
     }
     
-    override func bind() {
-        signupUIButton.addTarget(for: .touchUpInside) { _ in
-            let vc = NameSignupViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+    @objc private func goToSignup(_ sender: UIButton){
+        let vc = NameSignupViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
 }
+
+

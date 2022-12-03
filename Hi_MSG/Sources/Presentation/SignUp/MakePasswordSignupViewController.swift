@@ -59,6 +59,7 @@ final class MakePassWordViewController: BaseViewController {
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 22, family: .semiBold)
         $0.backgroundColor = UIColor(rgb: 0x999999)
+        $0.addTarget(self, action: #selector(aftercomplete), for: .touchUpInside)
     }
     
     override func addView() {
@@ -128,12 +129,10 @@ final class MakePassWordViewController: BaseViewController {
         }
     }
     
-    override func bind() {
-        nextStepButton.addTarget(for: .touchUpInside) { _ in
-            if self.nextStep == true{
-                let vc = WelcomeSignupViewController()
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
+    @objc private func aftercomplete(_ sender: UIButton){
+        if nextStep == true {
+            let vc = WelcomeSignupViewController()
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

@@ -11,7 +11,7 @@ final class IntroViewController: BaseViewController{
         $0.image = UIImage(named: "HI LOGO2")
         $0.clipsToBounds = true
     }
-
+    
     private let welcomeImageView = UIImageView().then{
         $0.image = UIImage(named: "Welcome_Image")
         $0.clipsToBounds = true
@@ -29,12 +29,13 @@ final class IntroViewController: BaseViewController{
         $0.font = UIFont(name: "Pretendard-Bold", size: 20)
     }
     
-    private let loginButton = UIButton().then{
+   private let loginButton = UIButton().then{
         $0.setTitle("로그인하기", for: .normal)
         $0.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 20)
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.backgroundColor =  UIColor(rgb: 0xFFC033)
         $0.layer.cornerRadius = 15
+        $0.addTarget(self, action: #selector(goToLogin), for: .touchUpInside)
     }
     
     private let signupButton = UIButton().then{
@@ -42,9 +43,10 @@ final class IntroViewController: BaseViewController{
         $0.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 20)
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.backgroundColor =  UIColor(rgb: 0xFFC033)
-        $0.layer.cornerRadius = 15 
+        $0.layer.cornerRadius = 15
+        $0.addTarget(self, action: #selector(goToSignup), for: .touchUpInside)
     }
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = backBarButtonItem
@@ -93,15 +95,15 @@ final class IntroViewController: BaseViewController{
             $0.height.equalTo(50)
         }
     }
-    override func bind() {
-        loginButton.addTarget(for: .touchUpInside) { _ in
-            let vc = LoginViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-        
-        signupButton.addTarget(for: .touchUpInside) { _ in
-            let vc = NameSignupViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+    
+    @objc private func goToLogin(_ sender: UIButton){
+        let vc = LoginViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @objc private func goToSignup(_ sender: UIButton){
+        let vc = NameSignupViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

@@ -26,6 +26,7 @@ final class WelcomeSignupViewController: BaseViewController {
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 23, family: .semiBold)
         $0.backgroundColor = UIColor(rgb: 0xFFC033)
+        $0.addTarget(self, action: #selector(aftercomplete), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -66,10 +67,8 @@ final class WelcomeSignupViewController: BaseViewController {
           self.navigationItem.hidesBackButton = true
      }
     
-    override func bind() {
-        nextStepButton.addTarget(for: .touchUpInside) { _ in
+    @objc private func aftercomplete(_ sender: UIButton){
             let vc = LoginViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+            navigationController?.pushViewController(vc, animated: true)
     }
 }
