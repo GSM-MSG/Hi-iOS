@@ -78,8 +78,7 @@ final class NameSignupViewController: BaseViewController {
         }
         self.underLineView.snp.makeConstraints {
             $0.top.equalTo(nameTextField.snp.bottom).offset(12)
-            $0.leading.equalTo(self.view).offset(20)
-            $0.trailing.equalTo(self.view).inset(20)
+            $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(2)
         }
         self.nextStepButton.snp.makeConstraints {

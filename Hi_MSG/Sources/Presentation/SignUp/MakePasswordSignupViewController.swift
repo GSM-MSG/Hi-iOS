@@ -1,6 +1,6 @@
 import UIKit
 
-final class MakePassWordViewController: BaseViewController {
+final class MakePasswordSignupViewController: BaseViewController {
     
     private var nextStep: Bool = false
     

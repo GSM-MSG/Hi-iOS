@@ -41,7 +41,7 @@ final class EmailSignupViewController: BaseViewController {
         $0.backgroundColor = .init(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1))
     }
     
-    private let sendCirtifycationNumberButton = UIButton().then {
+    private let sendCirtificationNumberButton = UIButton().then {
         $0.setTitle("인증번호 발송", for: .normal)
         $0.backgroundColor = UIColor(rgb: 0xFFFFFF)
         $0.setTitleColor(UIColor(rgb: 0xFFC033), for: .normal)
@@ -64,7 +64,7 @@ final class EmailSignupViewController: BaseViewController {
     }
     
     override func addView() {
-        view.addSubviews(welcomeLabel, subWelcomeLabel, emailExplainLabel, emailTextField, underLineView, sendCirtifycationNumberButton, nextStepButton)
+        view.addSubviews(welcomeLabel, subWelcomeLabel, emailExplainLabel, emailTextField, underLineView, sendCirtificationNumberButton, nextStepButton)
     }
     
     override func setLayout() {
@@ -91,7 +91,7 @@ final class EmailSignupViewController: BaseViewController {
             $0.trailing.equalTo(self.view).inset(20)
             $0.height.equalTo(2)
         }
-        self.sendCirtifycationNumberButton.snp.makeConstraints {
+        self.sendCirtificationNumberButton.snp.makeConstraints {
             $0.top.equalTo(self.emailTextField.snp.top)
             $0.bottom.equalTo(self.emailTextField.snp.bottom)
             $0.trailing.equalTo(self.view.snp.trailing).inset(28)
@@ -148,7 +148,7 @@ final class EmailSignupViewController: BaseViewController {
             emailExplainLabel.text = "인증번호는 여기에 써주세요!"
             emailTextField.placeholder = "인증번호를 입력해 주세요."
             emailTextField.text = ""
-            sendCirtifycationNumberButton.setTitle("다시 받기", for: .normal)
+            sendCirtificationNumberButton.setTitle("다시 받기", for: .normal)
         }
         else {
             print("이메일의 형식이 다릅니다.")
@@ -157,7 +157,7 @@ final class EmailSignupViewController: BaseViewController {
     
     @objc private func aftercomplete(_ sender: UIButton){
         if nextStep == true {
-            let vc = MakePassWordViewController()
+            let vc = MakePasswordSignupViewController()
             navigationController?.pushViewController(vc, animated: true)
         }
     }
