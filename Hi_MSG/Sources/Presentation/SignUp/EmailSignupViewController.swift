@@ -54,7 +54,7 @@ final class EmailSignupViewController: BaseViewController {
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 22, family: .semiBold)
         $0.backgroundColor = UIColor(rgb: 0x999999)
-        $0.addTarget(self, action: #selector(aftercomplete), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(nextStepButtonDidTap), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -155,7 +155,7 @@ final class EmailSignupViewController: BaseViewController {
         }
     }
     
-    @objc private func aftercomplete(_ sender: UIButton){
+    @objc private func nextStepButtonDidTap(_ sender: UIButton){
         if nextStep == true {
             let vc = MakePasswordSignupViewController()
             navigationController?.pushViewController(vc, animated: true)
