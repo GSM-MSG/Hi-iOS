@@ -68,7 +68,7 @@ final class WelcomeSignupViewController: BaseViewController {
      }
     
     @objc private func aftercomplete(_ sender: UIButton){
-            let vc = LoginViewController()
+            let vc = IntroViewController()
             navigationController?.pushViewController(vc, animated: true)
     }
 }
