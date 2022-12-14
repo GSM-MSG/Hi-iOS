@@ -18,7 +18,6 @@ extension UIColor {
            )
        }
     
-    // let's suppose alpha is the first component (ARGB)
     convenience init(argb: Int) {
         self.init(
             red: (argb >> 16) & 0xFF,

@@ -1,19 +1,13 @@
-//
-//  SecondSUViewController.swift
-//  Hi_MSG ( made by Park Gunwoo )
-//
-//  Created by GSM02 on 2022/11/10.
-//
-
 import Foundation
 import UIKit
 import SnapKit
 import Then
 
-class SecondSignUpViewController: BaseViewController {
+final class EmailSignupViewController: BaseViewController {
     
-    private var nextStep: Bool = false // 인증번호 형식이 같으면 true 시켜줌.
-    private var SendCirtifycationNumber: Bool = false // textField 값이 이메일 형식과 같은 경우 이 멤버를 true 시켜준다. 인증번호 받기 버튼을 눌렀을 때 true 일 경우 인증번호 발송, false 일 경우 이메일의 형식이 다르다고 사용자에게 알려줌.
+    private var nextStep: Bool = false
+
+    private var SendCertificationNumber: Bool = false
     
     private let backBarButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: nil)
     
@@ -47,12 +41,12 @@ class SecondSignUpViewController: BaseViewController {
         $0.backgroundColor = .init(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1))
     }
     
-    private let sendCirtifycationNumberButton = UIButton().then { // cirtification number 인증번호
+    private let sendCertificationNumberButton = UIButton().then {
         $0.setTitle("인증번호 발송", for: .normal)
         $0.backgroundColor = UIColor(rgb: 0xFFFFFF)
         $0.setTitleColor(UIColor(rgb: 0xFFC033), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 15, family: .regular)
-        $0.addTarget(self, action: #selector(sendCirtifycationNumber), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(sendCertificationNumber), for: .touchUpInside)
     }
     
     private let nextStepButton = UIButton().then {
@@ -60,7 +54,7 @@ class SecondSignUpViewController: BaseViewController {
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 22, family: .semiBold)
         $0.backgroundColor = UIColor(rgb: 0x999999)
-        $0.addTarget(self, action: #selector(aftercomplete), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(nextStepButtonDidTap), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -70,7 +64,15 @@ class SecondSignUpViewController: BaseViewController {
     }
     
     override func addView() {
-        view.addSubviews(welcomeLabel, subWelcomeLabel, emailExplainLabel, emailTextField, underLineView, sendCirtifycationNumberButton, nextStepButton)
+        view.addSubviews(
+            welcomeLabel,
+            subWelcomeLabel,
+            emailExplainLabel,
+            emailTextField,
+            underLineView,
+            sendCertificationNumberButton,
+            nextStepButton
+        )
     }
     
     override func setLayout() {
@@ -97,7 +99,7 @@ class SecondSignUpViewController: BaseViewController {
             $0.trailing.equalTo(self.view).inset(20)
             $0.height.equalTo(2)
         }
-        self.sendCirtifycationNumberButton.snp.makeConstraints {
+        self.sendCertificationNumberButton.snp.makeConstraints {
             $0.top.equalTo(self.emailTextField.snp.top)
             $0.bottom.equalTo(self.emailTextField.snp.bottom)
             $0.trailing.equalTo(self.view.snp.trailing).inset(28)
@@ -110,36 +112,35 @@ class SecondSignUpViewController: BaseViewController {
     }
     
     @objc func textFieldDidChange(_ sender: Any?) {
-        if SendCirtifycationNumber == false {
+        if SendCertificationNumber == false {
             emailFormatCheck()
         }
         else {
-            certifycationNumberCheck()
+            certificationNumberCheck()
         }
     }
     
     func emailFormatCheck() {
         
-        var id = emailTextField.text ?? "" //optional을 위해 string 뒤에 ?를 붙여준다.
+        var id = emailTextField.text ?? ""
         
         if id.count == 16{
             let firstIdIndex = id.index(id.startIndex, offsetBy: 6)
             let lastIdIndex = id.index(id.startIndex, offsetBy: 16)
             let mail = id[firstIdIndex..<lastIdIndex]
             if mail == "@gsm.hs.kr"{
-                SendCirtifycationNumber = true
+                SendCertificationNumber = true
                 print("cnBCheck is true")
             }
             else {
-                SendCirtifycationNumber = false
+                SendCertificationNumber = false
             }
         }
     }
     
-    func certifycationNumberCheck() {
+    func certificationNumberCheck() {
         var id = emailTextField.text ?? ""
-        
-        if id == "0" { // 아직 랜덤 번호를 이메일에 보내는 방법을 모르기 때문에 임의의 수 0을 다음 화면으로 가기 위해 지정해놓음.
+        if id == "0" {
             nextStep = true
             nextStepButton.backgroundColor = UIColor(rgb: 0xFFC033)
         }
@@ -149,23 +150,23 @@ class SecondSignUpViewController: BaseViewController {
         }
     }
     
-    @objc func sendCirtifycationNumber(_ sender: UIButton){
-        if SendCirtifycationNumber == true {
-            print("Send cirtification number.") // 백엔드 통신 부분
+    @objc func sendCertificationNumber(_ sender: UIButton){
+        if SendCertificationNumber == true {
+            print("Send cirtification number.")
             emailExplainLabel.text = "인증번호는 여기에 써주세요!"
             emailTextField.placeholder = "인증번호를 입력해 주세요."
             emailTextField.text = ""
-            sendCirtifycationNumberButton.setTitle("다시 받기", for: .normal)
+            sendCertificationNumberButton.setTitle("다시 받기", for: .normal)
         }
         else {
-            print("이메일의 형식이 다릅니다.") // 경고창 출력 부분
+            print("이메일의 형식이 다릅니다.")
         }
     }
     
-    @objc private func aftercomplete(_ sender: UIButton){
-          if nextStep == true {
-              let vc = ThirdSignUpViewController()
-              navigationController?.pushViewController(vc, animated: true)
-          }
-      }
+    @objc private func nextStepButtonDidTap(_ sender: UIButton){
+        if nextStep == true {
+            let vc = MakePasswordSignupViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }

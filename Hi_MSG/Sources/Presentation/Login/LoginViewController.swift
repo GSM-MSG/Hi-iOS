@@ -1,4 +1,3 @@
-
 import Foundation
 import UIKit
 import SnapKit
@@ -55,6 +54,7 @@ final class LoginViewController: BaseViewController {
         $0.setTitle("회원가입", for: .normal)
         $0.setTitleColor(UIColor(rgb: 0x999999), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 16, family: .medium)
+        $0.addTarget(self, action: #selector(goToSignup), for: .touchUpInside)
     }
     
     private let findPasswordUIButton = UIButton().then {
@@ -82,16 +82,29 @@ final class LoginViewController: BaseViewController {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = backBarButtonItem
         backBarButtonItem.tintColor = UIColor(rgb: 0xFFD068)
-        
     }
     
     override func addView() {
-        view.addSubviews(idTextField,pwTextField,welcomeUILabel,subWelcomeUILabel,idExplainUILabel,pwExplainUILabel,nextStepUIButton,idUnderLineView,pwUnderLineView,signupUIButton,findPasswordUIButton,betweenSignupAndPwUIButton)
+        view.addSubviews(
+            idTextField,
+            pwTextField,
+            welcomeUILabel,
+            subWelcomeUILabel,
+            idExplainUILabel,
+            pwExplainUILabel,
+            nextStepUIButton,
+            idUnderLineView,
+            pwUnderLineView,
+            signupUIButton,
+            findPasswordUIButton,
+            betweenSignupAndPwUIButton
+        )
     }
+    
     override func setLayout() {
         self.welcomeUILabel.snp.makeConstraints{
-            $0.top.equalTo(self.view).offset(87)
-            $0.leading.equalTo(self.view).offset(16)
+            $0.top.equalToSuperview().offset(87)
+            $0.leading.equalToSuperview().offset(16)
         }
         self.subWelcomeUILabel.snp.makeConstraints{
             $0.top.equalTo(self.welcomeUILabel.snp.bottom)
@@ -99,12 +112,12 @@ final class LoginViewController: BaseViewController {
         }
         self.idExplainUILabel.snp.makeConstraints{
             $0.top.equalTo(self.subWelcomeUILabel.snp.bottom).offset(116)
-            $0.leading.equalTo(self.view).offset(20)
+            $0.leading.equalToSuperview().offset(20)
             
         }
         self.idTextField.snp.makeConstraints{
             $0.top.equalTo(self.idExplainUILabel.snp.bottom).offset(8)
-            $0.leading.trailing.equalTo(self.view).offset(24)
+            $0.leading.trailing.equalToSuperview().offset(24)
         }
         self.idUnderLineView.snp.makeConstraints{
             $0.top.equalTo(idExplainUILabel.snp.bottom).offset(36)
@@ -147,14 +160,11 @@ final class LoginViewController: BaseViewController {
     }
     
     @objc func buttonColorChange(_ sender: Any?) {
-        
         nextStepUIButton.backgroundColor = UIColor(rgb :pwTextField.text?.count ?? 0 >= 1 ?  0xFFC033 : 0x999999 )
     }
     
-    override func bind() {
-        signupUIButton.addTarget(for: .touchUpInside) { _ in
-            let vc = FirstSignupVC()
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+    @objc private func goToSignup(_ sender: UIButton){
+        let vc = NameSignupViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
