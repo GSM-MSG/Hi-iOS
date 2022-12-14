@@ -30,7 +30,7 @@ final class MakePasswordSignupViewController: BaseViewController {
         $0.isSecureTextEntry = true
         $0.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
-
+    
     private let underLineView = UIView().then {
         $0.backgroundColor = .init(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1))
     }
@@ -111,13 +111,13 @@ final class MakePasswordSignupViewController: BaseViewController {
             $0.height.equalTo(80)
         }
     }
-   
+    
     @objc private func textFieldDidChange(_ sender: Any?) {
-        if passwordTextField.text == passwordCheckTextField.text && passwordTextField.text?.count ?? 0 >= 8 && passwordTextField.text?.count ?? 0 <= 16{
-            let ps: String = passwordCheckTextField.text ?? ""
-            
-            let psCheck = "^(?=.*[!@#$%^&*()_+=-])"
-            let isContains = ps.range(of: psCheck, options: .regularExpression) != nil
+        if passwordTextField.text == passwordCheckTextField.text &&
+            8...16 ~= passwordTextField.text?.count ?? 0 {
+            let password: String = passwordCheckTextField.text ?? ""
+            let psPattern = "^(?=.*[!@#$%^&*()_+=-])"
+            let isContains = password.range(of: psPattern, options: .regularExpression) != nil
             if isContains == true {
                 nextStepButton.backgroundColor = UIColor(rgb: 0xFFC033)
                 nextStep = true
