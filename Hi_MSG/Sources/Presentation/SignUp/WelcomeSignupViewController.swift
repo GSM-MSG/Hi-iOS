@@ -35,7 +35,12 @@ final class WelcomeSignupViewController: BaseViewController {
     }
     
     override func addView() {
-        view.addSubviews(signupSuccessImageView, welcomeLabel, subWelcomeLabel, nextStepButton)
+        view.addSubviews(
+            signupSuccessImageView,
+            welcomeLabel,
+            subWelcomeLabel,
+            nextStepButton
+        )
     }
     
     override func setLayout() {

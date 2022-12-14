@@ -85,12 +85,26 @@ final class LoginViewController: BaseViewController {
     }
     
     override func addView() {
-        view.addSubviews(idTextField,pwTextField,welcomeUILabel,subWelcomeUILabel,idExplainUILabel,pwExplainUILabel,nextStepUIButton,idUnderLineView,pwUnderLineView,signupUIButton,findPasswordUIButton,betweenSignupAndPwUIButton)
+        view.addSubviews(
+            idTextField,
+            pwTextField,
+            welcomeUILabel,
+            subWelcomeUILabel,
+            idExplainUILabel,
+            pwExplainUILabel,
+            nextStepUIButton,
+            idUnderLineView,
+            pwUnderLineView,
+            signupUIButton,
+            findPasswordUIButton,
+            betweenSignupAndPwUIButton
+        )
     }
+    
     override func setLayout() {
         self.welcomeUILabel.snp.makeConstraints{
-            $0.top.equalTo(self.view).offset(87)
-            $0.leading.equalTo(self.view).offset(16)
+            $0.top.equalToSuperview().offset(87)
+            $0.leading.equalToSuperview().offset(16)
         }
         self.subWelcomeUILabel.snp.makeConstraints{
             $0.top.equalTo(self.welcomeUILabel.snp.bottom)
@@ -98,12 +112,12 @@ final class LoginViewController: BaseViewController {
         }
         self.idExplainUILabel.snp.makeConstraints{
             $0.top.equalTo(self.subWelcomeUILabel.snp.bottom).offset(116)
-            $0.leading.equalTo(self.view).offset(20)
+            $0.leading.equalToSuperview().offset(20)
             
         }
         self.idTextField.snp.makeConstraints{
             $0.top.equalTo(self.idExplainUILabel.snp.bottom).offset(8)
-            $0.leading.trailing.equalTo(self.view).offset(24)
+            $0.leading.trailing.equalToSuperview().offset(24)
         }
         self.idUnderLineView.snp.makeConstraints{
             $0.top.equalTo(idExplainUILabel.snp.bottom).offset(36)
@@ -153,6 +167,4 @@ final class LoginViewController: BaseViewController {
         let vc = NameSignupViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }

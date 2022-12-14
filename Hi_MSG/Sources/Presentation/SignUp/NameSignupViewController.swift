@@ -55,7 +55,14 @@ final class NameSignupViewController: BaseViewController {
     }
     
     override func addView() {
-        view.addSubviews(welcomeLabel, subWelcomeLabel, nameExplainLabel, nameTextField, underLineView, nextStepButton)
+        view.addSubviews(
+            welcomeLabel,
+            subWelcomeLabel,
+            nameExplainLabel,
+            nameTextField,
+            underLineView,
+            nextStepButton
+        )
     }
     
     override func setLayout() {

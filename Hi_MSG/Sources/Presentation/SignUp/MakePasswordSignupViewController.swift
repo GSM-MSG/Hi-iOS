@@ -63,7 +63,16 @@ final class MakePasswordSignupViewController: BaseViewController {
     }
     
     override func addView() {
-        view.addSubviews(welcomeLabel, subWelcomeLabel, passwordExplainLabel, passwordTextField, underLineView, passwordCheckExplainLabel, passwordCheckTextField, underLine2View, nextStepButton)
+        view.addSubviews(
+            welcomeLabel,
+            subWelcomeLabel,
+            passwordExplainLabel,
+            passwordTextField,
+            underLineView,
+            passwordCheckExplainLabel,
+            passwordCheckTextField,
+            underLine2View,
+            nextStepButton)
     }
     
     override func setLayout() {

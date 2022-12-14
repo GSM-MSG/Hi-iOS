@@ -64,7 +64,15 @@ final class EmailSignupViewController: BaseViewController {
     }
     
     override func addView() {
-        view.addSubviews(welcomeLabel, subWelcomeLabel, emailExplainLabel, emailTextField, underLineView, sendCertificationNumberButton, nextStepButton)
+        view.addSubviews(
+            welcomeLabel,
+            subWelcomeLabel,
+            emailExplainLabel,
+            emailTextField,
+            underLineView,
+            sendCertificationNumberButton,
+            nextStepButton
+        )
     }
     
     override func setLayout() {
