@@ -1,13 +1,6 @@
-//
-//  FourthSignUpViewController.swift
-//  Hi_MSG
-//
-//  Created by GSM02 on 2022/11/21.
-//
-
 import UIKit
 
-class FourthSignUpViewController: BaseViewController {
+final class WelcomeSignupViewController: BaseViewController {
     
     private let signupSuccessImageView = UIImageView().then{
         $0.image = UIImage(named: "SignUp_Success_image")
@@ -33,7 +26,7 @@ class FourthSignUpViewController: BaseViewController {
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 23, family: .semiBold)
         $0.backgroundColor = UIColor(rgb: 0xFFC033)
-        $0.addTarget(self, action: #selector(aftercomplete), for: .touchUpInside) 
+        $0.addTarget(self, action: #selector(nextStepButtonDidTap), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -42,7 +35,12 @@ class FourthSignUpViewController: BaseViewController {
     }
     
     override func addView() {
-        view.addSubviews(signupSuccessImageView, welcomeLabel, subWelcomeLabel, nextStepButton)
+        view.addSubviews(
+            signupSuccessImageView,
+            welcomeLabel,
+            subWelcomeLabel,
+            nextStepButton
+        )
     }
     
     override func setLayout() {
@@ -74,7 +72,8 @@ class FourthSignUpViewController: BaseViewController {
           self.navigationItem.hidesBackButton = true
      }
     
-    @objc private func aftercomplete(_ sender: UIButton) {
-        navigationController?.popToRootViewController( animated: false )
+    @objc private func nextStepButtonDidTap(_ sender: UIButton){
+            let vc = IntroViewController()
+            navigationController?.pushViewController(vc, animated: true)
     }
 }

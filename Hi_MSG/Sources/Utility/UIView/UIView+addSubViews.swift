@@ -1,10 +1,3 @@
-//
-//  AddSubView.swift
-//  Hi_MSG
-//
-//  Created by 박준서 on 2022/11/10.
-//
-
 import Foundation
 import UIKit
 

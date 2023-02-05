@@ -3,8 +3,6 @@ import UIKit
 class BaseViewController: UIViewController {
     // MARK: - Properties
     let bounds = UIScreen().bounds
-    
-
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +18,10 @@ class BaseViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         setLayoutSubviews()
     }
-    
     // MARK: - Deinitalizer
     deinit {
         print("\(type(of: self)): \(#function)")
     }
-    
     // MARK: - Method
     private func setupBackgroundIfNotSet() {
         if self.view.backgroundColor == nil {

@@ -1,13 +1,6 @@
-//
-//  ThirdSUViewController.swift
-//  Hi_MSG
-//
-//  Created by GSM02 on 2022/11/11.
-//
-
 import UIKit
 
-class ThirdSignUpViewController: BaseViewController {
+final class MakePasswordSignupViewController: BaseViewController {
     
     private var nextStep: Bool = false
     
@@ -37,7 +30,7 @@ class ThirdSignUpViewController: BaseViewController {
         $0.isSecureTextEntry = true
         $0.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
-
+    
     private let underLineView = UIView().then {
         $0.backgroundColor = .init(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1))
     }
@@ -66,11 +59,20 @@ class ThirdSignUpViewController: BaseViewController {
         $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.titleLabel?.font = .hi_MSG(size: 22, family: .semiBold)
         $0.backgroundColor = UIColor(rgb: 0x999999)
-        $0.addTarget(self, action: #selector(aftercomplete), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(nextStepButtonDidTap), for: .touchUpInside)
     }
     
     override func addView() {
-        view.addSubviews(welcomeLabel, subWelcomeLabel, passwordExplainLabel, passwordTextField, underLineView, passwordCheckExplainLabel, passwordCheckTextField, underLine2View, nextStepButton)
+        view.addSubviews(
+            welcomeLabel,
+            subWelcomeLabel,
+            passwordExplainLabel,
+            passwordTextField,
+            underLineView,
+            passwordCheckExplainLabel,
+            passwordCheckTextField,
+            underLine2View,
+            nextStepButton)
     }
     
     override func setLayout() {
@@ -118,13 +120,13 @@ class ThirdSignUpViewController: BaseViewController {
             $0.height.equalTo(80)
         }
     }
-   
+    
     @objc private func textFieldDidChange(_ sender: Any?) {
-        if passwordTextField.text == passwordCheckTextField.text && passwordTextField.text?.count ?? 0 >= 8 {
-            let ps: String = passwordCheckTextField.text ?? ""
-            
-            let psCheck = "^(?=.*[!@#$%^&*()_+=-])"
-            let isContains = ps.range(of: psCheck, options: .regularExpression) != nil
+        if passwordTextField.text == passwordCheckTextField.text &&
+            8...16 ~= passwordTextField.text?.count ?? 0 {
+            let password: String = passwordCheckTextField.text ?? ""
+            let psPattern = "^(?=.*[!@#$%^&*()_+=-])"
+            let isContains = password.range(of: psPattern, options: .regularExpression) != nil
             if isContains == true {
                 nextStepButton.backgroundColor = UIColor(rgb: 0xFFC033)
                 nextStep = true
@@ -136,11 +138,10 @@ class ThirdSignUpViewController: BaseViewController {
         }
     }
     
-    @objc private func aftercomplete(_ sender: UIButton){
+    @objc private func nextStepButtonDidTap(_ sender: UIButton){
         if nextStep == true {
-            let vc = FourthSignUpViewController()
-            navigationController?.pushViewController(vc, animated: false)
-            //            navigationController?.popToRootViewController( animated: false )
+            let vc = WelcomeSignupViewController()
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

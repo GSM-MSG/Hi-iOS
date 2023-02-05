@@ -4,7 +4,6 @@ import SnapKit
 import Then
 
 final class IntroViewController: BaseViewController{
-    // MARK: - Properties
     
     let backBarButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: nil)
     
@@ -12,10 +11,10 @@ final class IntroViewController: BaseViewController{
         $0.image = UIImage(named: "HI LOGO2")
         $0.clipsToBounds = true
     }
-
+    
     private let welcomeImageView = UIImageView().then{
         $0.image = UIImage(named: "Welcome_Image")
-        $0.clipsToBounds = true // 잘리는거
+        $0.clipsToBounds = true
     }
     
     private let welcomeUILablel = UILabel().then{
@@ -30,29 +29,30 @@ final class IntroViewController: BaseViewController{
         $0.font = UIFont(name: "Pretendard-Bold", size: 20)
     }
     
-    private let loginButton = UIButton().then{
+   private let loginButton = UIButton().then{
         $0.setTitle("로그인하기", for: .normal)
         $0.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 20)
-        $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal) //버튼 안에 들어갈 글자 색깔
+        $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.backgroundColor =  UIColor(rgb: 0xFFC033)
-        $0.layer.cornerRadius = 15 // 버튼 곡률 크기
+        $0.layer.cornerRadius = 15
+        $0.addTarget(self, action: #selector(goToLogin), for: .touchUpInside)
     }
     
     private let signupButton = UIButton().then{
-        $0.setTitle("회원가입하기", for: .normal) // 버튼 안에 들어갈 글자
+        $0.setTitle("회원가입하기", for: .normal)
         $0.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 20)
-        $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal) //버튼 안에 들어갈 글자 색깔
+        $0.setTitleColor(UIColor(rgb: 0xFFFFFF), for: .normal)
         $0.backgroundColor =  UIColor(rgb: 0xFFC033)
-        $0.layer.cornerRadius = 15 // 버튼 곡률 크기
+        $0.layer.cornerRadius = 15
+        $0.addTarget(self, action: #selector(goToSignup), for: .touchUpInside)
     }
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = backBarButtonItem
         backBarButtonItem.tintColor = UIColor(rgb: 0xFFD068)
     }
     
-    // MARK: - Method
     override func addView() {
         view.addSubviews(
             logoImageView,
@@ -95,15 +95,15 @@ final class IntroViewController: BaseViewController{
             $0.height.equalTo(50)
         }
     }
-    override func bind() {
-        loginButton.addTarget(for: .touchUpInside) { _ in
-            let vc = LoginViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-        
-        signupButton.addTarget(for: .touchUpInside) { _ in
-            let vc = FirstSignUpViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+    
+    @objc private func goToLogin(_ sender: UIButton){
+        let vc = LoginViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @objc private func goToSignup(_ sender: UIButton){
+        let vc = NameSignupViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
