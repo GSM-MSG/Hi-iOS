@@ -24,19 +24,20 @@
 		785D364D2919449B002FDA0D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D364C2919449B002FDA0D /* IntroViewController.swift */; };
 		785D3651291944AA002FDA0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D3650291944AA002FDA0D /* SceneDelegate.swift */; };
 		785D3657291945A2002FDA0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D3656291945A2002FDA0D /* LaunchScreen.storyboard */; };
-		785D3659291945CD002FDA0D /* FirstSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D3658291945CD002FDA0D /* FirstSignupVC.swift */; };
-		785D366429194717002FDA0D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 785D366329194717002FDA0D /* SnapKit */; };
 		785D366B291949F6002FDA0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785D3652291944B4002FDA0D /* Assets.xcassets */; };
-		B89966E92922870A000CCD11 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B89966E82922870A000CCD11 /* Then */; };
-		B89966EC29228A1D000CCD11 /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966EB29228A1D000CCD11 /* SecondSignUpViewController.swift */; };
-		B89966EE29228A26000CCD11 /* ThirdSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966ED29228A26000CCD11 /* ThirdSignUpViewController.swift */; };
-		B89966F029228B01000CCD11 /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966EF29228B01000CCD11 /* FirstSignUpViewController.swift */; };
-		B89966F2292BC72B000CCD11 /* FourthSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89966F1292BC72B000CCD11 /* FourthSignUpViewController.swift */; };
+		B8B7C2DF294B5F0D00A02FCE /* EmailSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B7C2DE294B5F0C00A02FCE /* EmailSignupViewController.swift */; };
+		B8B7C2E1294B5F2700A02FCE /* MakePasswordSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B7C2E0294B5F2700A02FCE /* MakePasswordSignupViewController.swift */; };
+		B8B7C2E3294B5F3000A02FCE /* NameSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B7C2E2294B5F3000A02FCE /* NameSignupViewController.swift */; };
+		B8B7C2E5294B5F3500A02FCE /* WelcomeSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B7C2E4294B5F3400A02FCE /* WelcomeSignupViewController.swift */; };
+		B8D31443299359BB00D21035 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D31442299359BB00D21035 /* NoticeViewController.swift */; };
+		B8D31445299359CC00D21035 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D31444299359CC00D21035 /* HomeViewController.swift */; };
+		B8D31447299393CE00D21035 /* NoticeContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D31446299393CE00D21035 /* NoticeContentsViewController.swift */; };
+		B8D3144A29A2151A00D21035 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B8D3144929A2151A00D21035 /* Alamofire */; };
+		B8D3144C29A22A5000D21035 /* ResisterNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D3144B29A22A4F00D21035 /* ResisterNoticeViewController.swift */; };
 		EE384999291DD3BE0020B231 /* ImageSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE384998291DD3BE0020B231 /* ImageSystem.swift */; };
 		EE38499B291DD3CD0020B231 /* FontSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE38499A291DD3CD0020B231 /* FontSystem.swift */; };
 		EE38499D291DD3D20020B231 /* ColorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE38499C291DD3D20020B231 /* ColorSystem.swift */; };
 		EE3849A2291DD7500020B231 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3849A1291DD7500020B231 /* Image.xcassets */; };
-		EE3849A4291DD7560020B231 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3849A3291DD7560020B231 /* Color.xcassets */; };
 		EE3849A7291DE02C0020B231 /* UIButton+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3849A6291DE02C0020B231 /* UIButton+Action.swift */; };
 		EE45BEC3291DC42300736608 /* UIView+addSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45BEC2291DC42300736608 /* UIView+addSubViews.swift */; };
 		EE45BED0291DC5DF00736608 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45BECF291DC5DF00736608 /* BaseViewController.swift */; };
@@ -61,15 +62,18 @@
 		785D3656291945A2002FDA0D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		785D36692919490A002FDA0D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		788CB93428FD45C6004C27C8 /* Hi_MSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hi_MSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B89966EB29228A1D000CCD11 /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
-		B89966ED29228A26000CCD11 /* ThirdSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdSignUpViewController.swift; sourceTree = "<group>"; };
-		B89966EF29228B01000CCD11 /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
-		B89966F1292BC72B000CCD11 /* FourthSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthSignUpViewController.swift; sourceTree = "<group>"; };
+		B8B7C2DE294B5F0C00A02FCE /* EmailSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignupViewController.swift; sourceTree = "<group>"; };
+		B8B7C2E0294B5F2700A02FCE /* MakePasswordSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakePasswordSignupViewController.swift; sourceTree = "<group>"; };
+		B8B7C2E2294B5F3000A02FCE /* NameSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameSignupViewController.swift; sourceTree = "<group>"; };
+		B8B7C2E4294B5F3400A02FCE /* WelcomeSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeSignupViewController.swift; sourceTree = "<group>"; };
+		B8D31442299359BB00D21035 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		B8D31444299359CC00D21035 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B8D31446299393CE00D21035 /* NoticeContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeContentsViewController.swift; sourceTree = "<group>"; };
+		B8D3144B29A22A4F00D21035 /* ResisterNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResisterNoticeViewController.swift; sourceTree = "<group>"; };
 		EE384998291DD3BE0020B231 /* ImageSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSystem.swift; sourceTree = "<group>"; };
 		EE38499A291DD3CD0020B231 /* FontSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSystem.swift; sourceTree = "<group>"; };
 		EE38499C291DD3D20020B231 /* ColorSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSystem.swift; sourceTree = "<group>"; };
 		EE3849A1291DD7500020B231 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
-		EE3849A3291DD7560020B231 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		EE3849A6291DE02C0020B231 /* UIButton+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Action.swift"; sourceTree = "<group>"; };
 		EE45BEC2291DC42300736608 /* UIView+addSubViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+addSubViews.swift"; sourceTree = "<group>"; };
 		EE45BECF291DC5DF00736608 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8D3144A29A2151A00D21035 /* Alamofire in Frameworks */,
 				783ED837292282B200B18907 /* SnapKit in Frameworks */,
 				783ED83A292282BC00B18907 /* Then in Frameworks */,
 			);
@@ -99,10 +104,10 @@
 		785D366C29194A36002FDA0D /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				B89966EF29228B01000CCD11 /* FirstSignUpViewController.swift */,
-				B89966EB29228A1D000CCD11 /* SecondSignUpViewController.swift */,
-				B89966ED29228A26000CCD11 /* ThirdSignUpViewController.swift */,
-				B89966F1292BC72B000CCD11 /* FourthSignUpViewController.swift */,
+				B8B7C2DE294B5F0C00A02FCE /* EmailSignupViewController.swift */,
+				B8B7C2E0294B5F2700A02FCE /* MakePasswordSignupViewController.swift */,
+				B8B7C2E2294B5F3000A02FCE /* NameSignupViewController.swift */,
+				B8B7C2E4294B5F3400A02FCE /* WelcomeSignupViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -241,7 +246,6 @@
 			children = (
 				785D3652291944B4002FDA0D /* Assets.xcassets */,
 				EE3849A1291DD7500020B231 /* Image.xcassets */,
-				EE3849A3291DD7560020B231 /* Color.xcassets */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -285,6 +289,10 @@
 		EE45BEBE291DC39E00736608 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B8D31444299359CC00D21035 /* HomeViewController.swift */,
+				B8D31442299359BB00D21035 /* NoticeViewController.swift */,
+				B8D3144B29A22A4F00D21035 /* ResisterNoticeViewController.swift */,
+				B8D31446299393CE00D21035 /* NoticeContentsViewController.swift */,
 				783ED8322922825400B18907 /* Login */,
 				EE45BEBF291DC3BB00736608 /* Intro */,
 				785D366C29194A36002FDA0D /* SignUp */,
@@ -335,6 +343,7 @@
 			packageProductDependencies = (
 				783ED836292282B200B18907 /* SnapKit */,
 				783ED839292282BC00B18907 /* Then */,
+				B8D3144929A2151A00D21035 /* Alamofire */,
 			);
 			productName = Hi_MSG;
 			productReference = 788CB93428FD45C6004C27C8 /* Hi_MSG.app */;
@@ -367,6 +376,7 @@
 			packageReferences = (
 				783ED835292282B200B18907 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				783ED838292282BC00B18907 /* XCRemoteSwiftPackageReference "Then" */,
+				B8D3144829A2151A00D21035 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 788CB93528FD45C6004C27C8 /* Products */;
 			projectDirPath = "";
@@ -384,7 +394,6 @@
 			files = (
 				785D366B291949F6002FDA0D /* Assets.xcassets in Resources */,
 				EE3849A2291DD7500020B231 /* Image.xcassets in Resources */,
-				EE3849A4291DD7560020B231 /* Color.xcassets in Resources */,
 				785D364429194487002FDA0D /* Pretendard-Bold.otf in Resources */,
 				785D364829194487002FDA0D /* Pretendard-ExtraLight.otf in Resources */,
 				785D364529194487002FDA0D /* Pretendard-SemiBold.otf in Resources */,
@@ -405,20 +414,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8D31447299393CE00D21035 /* NoticeContentsViewController.swift in Sources */,
 				783ED8342922826C00B18907 /* LoginViewController.swift in Sources */,
-				B89966EE29228A26000CCD11 /* ThirdSignUpViewController.swift in Sources */,
 				EE384999291DD3BE0020B231 /* ImageSystem.swift in Sources */,
-				B89966F2292BC72B000CCD11 /* FourthSignUpViewController.swift in Sources */,
 				785D3651291944AA002FDA0D /* SceneDelegate.swift in Sources */,
+				B8D31445299359CC00D21035 /* HomeViewController.swift in Sources */,
+				B8B7C2E1294B5F2700A02FCE /* MakePasswordSignupViewController.swift in Sources */,
+				B8B7C2DF294B5F0D00A02FCE /* EmailSignupViewController.swift in Sources */,
+				B8D3144C29A22A5000D21035 /* ResisterNoticeViewController.swift in Sources */,
 				EE3849A7291DE02C0020B231 /* UIButton+Action.swift in Sources */,
+				B8D31443299359BB00D21035 /* NoticeViewController.swift in Sources */,
 				785D364D2919449B002FDA0D /* IntroViewController.swift in Sources */,
 				EE38499D291DD3D20020B231 /* ColorSystem.swift in Sources */,
 				EE45BEC3291DC42300736608 /* UIView+addSubViews.swift in Sources */,
+				B8B7C2E3294B5F3000A02FCE /* NameSignupViewController.swift in Sources */,
+				B8B7C2E5294B5F3500A02FCE /* WelcomeSignupViewController.swift in Sources */,
 				EE45BED0291DC5DF00736608 /* BaseViewController.swift in Sources */,
 				EE38499B291DD3CD0020B231 /* FontSystem.swift in Sources */,
-				B89966EC29228A1D000CCD11 /* SecondSignUpViewController.swift in Sources */,
 				785D364B29194493002FDA0D /* AppDelegate.swift in Sources */,
-				B89966F029228B01000CCD11 /* FirstSignUpViewController.swift in Sources */,
 				785D363729194472002FDA0D /* UIColor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +651,14 @@
 				kind = branch;
 			};
 		};
+		B8D3144829A2151A00D21035 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -650,6 +671,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 783ED838292282BC00B18907 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		B8D3144929A2151A00D21035 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8D3144829A2151A00D21035 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

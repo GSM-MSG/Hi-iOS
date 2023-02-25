@@ -73,7 +73,7 @@ final class WelcomeSignupViewController: BaseViewController {
      }
     
     @objc private func nextStepButtonDidTap(_ sender: UIButton){
-            let vc = IntroViewController()
-            navigationController?.pushViewController(vc, animated: true)
+        let vc = IntroViewController()
+        self.navigationController!.popToRootViewController(animated: true)
     }
 }

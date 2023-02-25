@@ -10,7 +10,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions) {
         guard let s = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: s)
-        let nav = UINavigationController(rootViewController: IntroViewController())
+        let nav = UINavigationController(rootViewController: NoticeViewController())
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }
