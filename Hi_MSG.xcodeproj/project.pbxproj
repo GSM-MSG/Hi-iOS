@@ -291,8 +291,8 @@
 			children = (
 				B8D31444299359CC00D21035 /* HomeViewController.swift */,
 				B8D31442299359BB00D21035 /* NoticeViewController.swift */,
-				B8D3144B29A22A4F00D21035 /* ResisterNoticeViewController.swift */,
 				B8D31446299393CE00D21035 /* NoticeContentsViewController.swift */,
+				B8D3144B29A22A4F00D21035 /* ResisterNoticeViewController.swift */,
 				783ED8322922825400B18907 /* Login */,
 				EE45BEBF291DC3BB00736608 /* Intro */,
 				785D366C29194A36002FDA0D /* SignUp */,
